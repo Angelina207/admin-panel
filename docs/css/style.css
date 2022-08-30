@@ -400,3 +400,40 @@ body {
   src: url("/docs/fonts/sofia pro/Sofia Pro ExtraLight Az.woff"), url("/docs/fonts/sofia pro/Sofia Pro ExtraLight Az.woff2");
   font-weight: 100;
 }
+.header {
+  position: relative;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 113px;
+  background: #393D46;
+}
+
+.header__burger {
+  display: block;
+  position: absolute;
+  left: 20px;
+  top: calc(50% - 10px);
+  background: transparent;
+  width: 25px;
+}
+
+.burger-elem {
+  width: 100%;
+  height: 2px;
+  background: #fff;
+}
+.burger-elem ~ .line2 {
+  margin: 5px 0;
+}
+
+.btn-open-search {
+  background: transparent;
+}
+
+.btn-wave-svg {
+  transform: rotate(180deg);
+}
+
+.header__nav {
+  display: none;
+}

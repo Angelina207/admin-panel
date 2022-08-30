@@ -1,0 +1,44 @@
+.header{
+    position: relative;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 113px;
+    background: $bc-header;
+}
+
+// Burger
+.header__burger{
+    display: block;
+    position: absolute;
+    left: 20px;
+    top: calc(50% - 10px);
+    background: transparent;
+    width: 25px;
+}
+.burger-elem{
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    & ~ .line2{
+        margin: 5px 0;
+    }
+}
+
+// Button to open search
+.header__btn{
+
+}
+.btn-open-search{
+    background: transparent;
+
+}
+.btn-wave-svg{
+    transform: rotate(180deg);
+}
+// Navigation
+.header__nav{ 
+    display: none;
+}
+// .nav-link{
+
+// }
