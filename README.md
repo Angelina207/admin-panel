@@ -1,2 +1,2 @@
 # responsive-panel
-  This is the responsive panel layout
+  This is the admin panel layout
