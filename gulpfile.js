@@ -1,9 +1,9 @@
 // Основной модуль
 import gulp from "gulp";
-// Импорт путей
 import { path } from "./gulp/config/path.js";
 // Импорт общих плагинов
 import { plugins } from "./gulp/config/plugins.js";
+// import {datepicker} from 'js-datepicker'
 
 // Передаем значения в глобальную переменную
 global.app = {
