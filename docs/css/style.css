@@ -301,104 +301,34 @@ body {
 }
 
 @font-face {
-  font-family: "Gilroy";
-  src: url("fonts/gilroy/Gilroy-Black.woff"), url("fonts/gilroy/Gilroy-Black.woff2");
+  font-family: "Google Sans";
+  src: url("../../fonts/google-sans/ProductSans-Black.woff") format("woff"), url("../../fonts/google-sans/ProductSans-Black.woff2") format("woff2");
   font-weight: 900;
+  font-display: swap;
 }
 @font-face {
-  font-family: "Gilroy";
-  src: url("/docs/fonts/gilroy/Gilroy-Extrabold.woff"), url("/docs/fonts/gilroy/Gilroy-Extrabold.woff2");
-  font-weight: 800;
-}
-@font-face {
-  font-family: "Gilroy";
-  src: url("/docs/fonts/gilroy/Gilroy-Heavy.woff"), url("/docs/fonts/gilroy/Gilroy-Heavy.woff2");
+  font-family: "Google Sans";
+  src: url("../../fonts/google sans/ProductSans-Bold.woff") format("woff"), url("../../fonts/google sans/ProductSans-Bold.woff2") format("woff2");
   font-weight: 700;
+  font-display: swap;
 }
 @font-face {
-  font-family: "Gilroy";
-  src: url("/docs/fonts/gilroy/Gilroy-Semibold.woff"), url("/docs/fonts/gilroy/Gilroy-Semibold.woff2");
-  font-weight: 600;
-}
-@font-face {
-  font-family: "Gilroy";
-  src: url("/docs/fonts/gilroy/Gilroy-Medium.woff"), url("/docs/fonts/gilroy/Gilroy-Medium.woff2");
+  font-family: "Google Sans";
+  src: url("../../fonts/google sans/ProductSans-Medium.woff") format("woff"), url("../../fonts/google sans/ProductSans-Medium.woff2") format("woff2");
   font-weight: 500;
+  font-display: swap;
 }
 @font-face {
-  font-family: "Gilroy";
-  src: url("/docs/fonts/gilroy/Gilroy-Regular.woff"), url("/docs/fonts/gilroy/Gilroy-Regular.woff2");
+  font-family: "Google Sans";
+  src: url("../../fonts/google sans/ProductSans-Regular.woff") format("woff"), url("../../fonts/google sans/ProductSans-Regular.woff2") format("woff2");
   font-weight: 400;
+  font-display: swap;
 }
 @font-face {
-  font-family: "Gilroy";
-  src: url("/docs/fonts/gilroy/Gilroy-Light.woff"), url("/docs/fonts/gilroy/Gilroy-Light.woff2");
-  font-weight: 300;
-}
-@font-face {
-  font-family: "Gilroy";
-  src: url("/docs/fonts/gilroy/Gilroy-Thin.woff"), url("/docs/fonts/gilroy/Gilroy-Thin.woff2");
+  font-family: "Google Sans";
+  src: url("../../fonts/google sans/ProductSans-Thin.woff") format("woff"), url("../../fonts/google sans/ProductSans-Thin.woff2") format("woff2");
   font-weight: 100;
-}
-@font-face {
-  font-family: "Google Sans";
-  src: url("/docs/fonts/google sans/ProductSans-Black.woff"), url("/docs/fonts/google sans/ProductSans-Black.woff2");
-  font-weight: 900;
-}
-@font-face {
-  font-family: "Google Sans";
-  src: url("/docs/fonts/google sans/ProductSans-Bold.woff"), url("/docs/fonts/google sans/ProductSans-Bold.woff2");
-  font-weight: 700;
-}
-@font-face {
-  font-family: "Google Sans";
-  src: url("/docs/fonts/google sans/ProductSans-Medium.woff"), url("/docs/fonts/google sans/ProductSans-Medium.woff2");
-  font-weight: 500;
-}
-@font-face {
-  font-family: "Google Sans";
-  src: url("/docs/fonts/google sans/ProductSans-Regular.woff"), url("/docs/fonts/google sans/ProductSans-Regular.woff2");
-  font-weight: 400;
-}
-@font-face {
-  font-family: "Google Sans";
-  src: url("/docs/fonts/google sans/ProductSans-Thin.woff"), url("/docs/fonts/google sans/ProductSans-Thin.woff2");
-  font-weight: 100;
-}
-@font-face {
-  font-family: "Google Sans";
-  src: url("/docs/fonts/sofia pro/Sofia Pro Black Az.woff"), url("/docs/fonts/sofia pro/Sofia Pro Black Az.woff2");
-  font-weight: 900;
-}
-@font-face {
-  font-family: "Google Sans";
-  src: url("/docs/fonts/sofia pro/Sofia Pro Bold Az.woff"), url("/docs/fonts/sofia pro/Sofia Pro Bold Az.woff2");
-  font-weight: 700;
-}
-@font-face {
-  font-family: "Google Sans";
-  src: url("/docs/fonts/sofia pro/Sofia Pro Semi Bold Az.woff"), url("/docs/fonts/sofia pro/Sofia Pro Semi Bold Az.woff2");
-  font-weight: 600;
-}
-@font-face {
-  font-family: "Google Sans";
-  src: url("/docs/fonts/sofia pro/Sofia Pro Medium Az.woff"), url("/docs/fonts/sofia pro/Sofia Pro Medium Az.woff2");
-  font-weight: 500;
-}
-@font-face {
-  font-family: "Google Sans";
-  src: url("/docs/fonts/sofia pro/Sofia Pro Regular Az.woff"), url("/docs/fonts/sofia pro/Sofia Pro Regular Az.woff2");
-  font-weight: 400;
-}
-@font-face {
-  font-family: "Google Sans";
-  src: url("/docs/fonts/sofia pro/Sofia Pro Light Az.woff"), url("/docs/fonts/sofia pro/Sofia Pro Light Az.woff2");
-  font-weight: 300;
-}
-@font-face {
-  font-family: "Google Sans";
-  src: url("/docs/fonts/sofia pro/Sofia Pro ExtraLight Az.woff"), url("/docs/fonts/sofia pro/Sofia Pro ExtraLight Az.woff2");
-  font-weight: 100;
+  font-display: swap;
 }
 .header {
   position: relative;
@@ -406,6 +336,7 @@ body {
   width: 100vw;
   height: 113px;
   background: #393D46;
+  font-family: "Google Sans";
 }
 
 .header__burger {
@@ -425,15 +356,43 @@ body {
 .burger-elem ~ .line2 {
   margin: 5px 0;
 }
+.burger-elem ~ .line3 {
+  width: 60%;
+}
 
 .btn-open-search {
   background: transparent;
 }
 
-.btn-wave-svg {
-  transform: rotate(180deg);
+.header__nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #edeff6;
 }
 
-.header__nav {
-  display: none;
+.nav-link {
+  color: #1C295D;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.nav-link-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #fff;
+  transition: all 250ms;
+}
+.nav-link-icon:hover, .nav-link-icon:focus {
+  background-color: #FF6647;
+}
+
+.nav-link-svg {
+  fill: #9BAAD3;
+}
+.nav-link-svg:hover, .nav-link-svg:focus {
+  fill: #fff;
 }

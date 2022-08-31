@@ -4,6 +4,7 @@
     width: 100vw;
     height: 113px;
     background: $bc-header;
+    font-family: 'Google Sans';
 }
 
 // Burger
@@ -22,23 +23,53 @@
     & ~ .line2{
         margin: 5px 0;
     }
+    & ~ .line3 {
+        width: 60%;
+    }
 }
 
 // Button to open search
-.header__btn{
+// .header__btn{
 
-}
+// }
 .btn-open-search{
     background: transparent;
 
 }
-.btn-wave-svg{
-    transform: rotate(180deg);
-}
+// .btn-wave-svg{
+//     transform: rotate(180deg);
+// }
 // Navigation
 .header__nav{ 
-    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #EDEFF6FF
 }
-// .nav-link{
+.nav-link{
+    color: $nav-text;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+.nav-link-icon{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: all 250ms;
+    &:hover,
+    &:focus{
+        background-color: $accent;
 
-// }
+    }
+}
+.nav-link-svg{
+    fill: #9BAAD3;
+    &:hover,
+    &:focus {
+        fill: #fff;
+        // stroke: #fff;
+    }
+}
