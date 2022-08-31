@@ -28,17 +28,6 @@
     }
 }
 
-// Button to open search
-// .header__btn{
-
-// }
-.btn-open-search{
-    background: transparent;
-
-}
-// .btn-wave-svg{
-//     transform: rotate(180deg);
-// }
 // Navigation
 .header__nav{ 
     position: absolute;
@@ -70,6 +59,13 @@
     &:hover,
     &:focus {
         fill: #fff;
-        // stroke: #fff;
     }
+}
+.nav__btn{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+.btn-power{
+
 }
