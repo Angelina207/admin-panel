@@ -1,4 +1,5 @@
 .filter{
+    font-family: 'Gilroy';
     // background: $bc-filter;
 }
 .filter-content{
@@ -16,4 +17,43 @@
     color: #000;
     font-size: 2rem;
     font-weight: 600;
+}
+.search-form{
+    width: 100%;
+}
+.search-label{
+    position: relative;
+}
+.search-svg{
+    position: absolute;
+    top: 0;
+    left: 15px;
+    fill: $main-tab;
+}
+.search-field{
+    max-width: 326px;
+    width: calc(100% - 60px);
+    height: 52px;
+    background: #FFFFFF;
+    box-shadow: 0px 24px 24px rgba(0, 0, 0, 0.02);
+    border-radius: 26px;
+    outline: none;
+    border: none;
+    padding: 0 15px 0 45px;
+    &::placeholder{
+        color: $main-tab;
+        font-size: 0.8rem;
+        font-weight: 400;
+    }
+}
+.config-btn{
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: $accent;
+    transition: box-shadow 250ms;
+    &:active,
+    &:hover {
+        box-shadow: 0px 4.2069px 4.2069px rgba(255, 102, 71, 0.25);
+    }
 }
