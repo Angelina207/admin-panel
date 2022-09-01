@@ -1,7 +1,79 @@
 @font-face {
-	font-family: fonts;
+	font-family: 'Google Sans';
 	font-display: swap;
-	src: url("../fonts/fonts.woff2") format("woff2"), url("../fonts/fonts.woff") format("woff");
+	src: url("../../fonts/google sans/ProductSans-Black.woff") format("woff"), url("../../fonts/google sans/ProductSans-Black.woff2") format("woff2");
+	font-weight: 900;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Google Sans';
+	font-display: swap;
+	src: url("../../fonts/google sans/ProductSans-Bold.woff") format("woff"), url("../../fonts/google sans/ProductSans-Bold.woff2") format("woff2");
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Google Sans';
+	font-display: swap;
+	src: url("../../fonts/google sans/ProductSans-Regular.woff") format("woff"), url("../../fonts/google sans/ProductSans-Regular.woff2") format("woff2");
 	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Google Sans';
+	font-display: swap;
+	src: url("../../fonts/google sans/ProductSans-Medium.woff") format("woff"), url("../../fonts/google sans/ProductSans-Medium.woff2") format("woff2");
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Google Sans';
+	font-display: swap;
+	src: url("../../fonts/google sans/ProductSans-Thin.woff") format("woff"), url("../../fonts/google sans/ProductSans-Thin.woff2") format("woff2");
+	font-weight: 100;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'Gilroy';
+	font-display: swap;
+	src: url("../../fonts/gilroy/Gilroy-Black.woff") format("woff"), url("../../fonts/gilroy/Gilroy-Black.woff2") format("woff2");
+	font-weight: 900;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Gilroy';
+	font-display: swap;
+	src: url("/docs/fonts/gilroy/Gilroy-Extrabold.woff") format("woff"), url("/docs/fonts/gilroy/Gilroy-Extrabold.woff2") format("woff2");
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Gilroy';
+	font-display: swap;
+	src: url("/docs/fonts/gilroy/Gilroy-Heavy.woff") format("woff"), url("/docs/fonts/gilroy/Gilroy-Heavy.woff2") format("woff2");
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Gilroy';
+	font-display: swap;
+	src: url("/docs/fonts/gilroy/Gilroy-Medium.woff") format("woff"), url("/docs/fonts/gilroy/Gilroy-Medium.woff2") format("woff2");
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Gilroy';
+	font-display: swap;
+	src: url("/docs/fonts/gilroy/Gilroy-Regular.woff") format("woff"), url("/docs/fonts/gilroy/Gilroy-Regular.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Gilroy';
+	font-display: swap;
+	src: url("/docs/fonts/gilroy/Gilroy-Thin.woff") format("woff"), url("/docs/fonts/gilroy/Gilroy-Thin.woff2") format("woff2");
+	font-weight: 100;
 	font-style: normal;
 }
