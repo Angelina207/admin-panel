@@ -17,17 +17,12 @@
             <div class="burger-elem line3"></div>
        </div>
 
-       <!-- Button to open search -->
-       <!-- <div class="header__btn">
-            <button class="btn-open-search">
-                <svg class="btn-wave-svg" width="15" height="123" viewBox="0 0 15 123" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 5.66675C0 2.90532 -2.23858 0.666748 -5 0.666748C-7.76142 0.666748 -10 2.90532 -10 5.66674V35.2021C-10 43.2309 -15 50.9713 -15 59.0001C-15 67.0289 -10 74.7692 -10 82.798V117.333C-10 120.095 -7.76142 122.333 -5 122.333C-2.23858 122.333 0 120.095 0 117.333V97.563C0 84.5495 15 72.0135 15 59.0001C15 58.3591 14.9598 57.7275 14.8818 57.1077C13.3873 45.2353 0 34.2996 0 22.3334V5.66675Z"/>
-                </svg>
-            </button>
-       </div> -->
-
        <!-- Navigation -->
-       <nav class="header__nav is-open">
+       <nav class="header__nav">
+            <div class="nav__btn-close">
+                <div class="btn-close"></div>
+            </div>
+        
             <a href="#" class="nav-link">
                 <div class="nav-link-icon">
                     <svg class="nav-link-svg" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -73,19 +68,31 @@
             </a>
 
             <!-- Button 'Power' -->
-            <!-- <div class="nav__btn">
+            <div class="nav__btn">
                 <button class="btn-power">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="btn-power-icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path d="M15.7331 4.41592C15.928 4.0335 16.3981 3.87864 16.7623 4.10575C18.2476 5.03194 19.4358 6.37479 20.1733 7.97461C21.0196 9.81048 21.2233 11.8778 20.7513 13.8436C20.2794 15.8093 19.1594 17.5589 17.5719 18.8104C15.9843 20.0619 14.0216 20.7425 12 20.7425C9.97845 20.7425 8.01575 20.0619 6.42817 18.8104C4.8406 17.5589 3.72061 15.8093 3.24868 13.8436C2.77675 11.8779 2.98036 9.8105 3.82671 7.97463C4.56423 6.3748 5.7524 5.03196 7.2377 4.10576C7.60189 3.87865 8.07203 4.03351 8.26689 4.41593C8.46174 4.79835 8.30694 5.26301 7.9469 5.49664C6.77094 6.25973 5.82951 7.34271 5.23822 8.62534C4.53803 10.1442 4.36958 11.8545 4.76001 13.4807C5.15044 15.107 6.07701 16.5544 7.39041 17.5898C8.70382 18.6252 10.3276 19.1883 12 19.1883C13.6725 19.1883 15.2962 18.6252 16.6096 17.5898C17.923 16.5544 18.8496 15.107 19.24 13.4807C19.6304 11.8545 19.462 10.1441 18.7618 8.62532C18.1705 7.34269 17.2291 6.25972 16.0531 5.49663C15.6931 5.263 15.5383 4.79834 15.7331 4.41592Z"/>
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2.25C12.4142 2.25 12.75 2.58579 12.75 3V8C12.75 8.41421 12.4142 8.75 12 8.75C11.5858 8.75 11.25 8.41421 11.25 8V3C11.25 2.58579 11.5858 2.25 12 2.25Z"/>
                     </svg>
                 </button>
-            </div> -->
+                <p class="btn-power-logout">Logout</p>
+            </div>
         </nav>    
     </div>
 </header>
 
 <script>
+    const nav = document.querySelector('.header__nav');
+    const burger = document.querySelector('.header__burger').addEventListener('click', isOpenNav);
+    const burgerClose = document.querySelector('.nav__btn-close').addEventListener('click', isCloseNav);
+
+    function isOpenNav() {
+        nav.classList.add('is-open');
+    }
+    function isCloseNav() {
+        if ( nav.classList.contains('is-open'))
+            nav.classList.remove('is-open');
+    }
 
 </script>
 	<main>

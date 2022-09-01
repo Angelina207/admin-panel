@@ -15,6 +15,7 @@
     top: calc(50% - 10px);
     background: transparent;
     width: 25px;
+    cursor: pointer;
 }
 .burger-elem{
     width: 100%;
@@ -37,11 +38,44 @@
     top: -1000%;
     left: 0;
     width: 100vw;
+    min-width: 320px;
     height: 100vh;
-    background: #EDEFF6FF;
+    background: rgb(244,245,250);
+    background: linear-gradient(90deg, rgba(244,245,250,1) 48%, rgba(234,236,241,1) 100%, rgba(216,218,225,1) 100%, rgba(214,216,223,1) 100%);
     padding: 80px 20px 20px 20px;
     overflow-y: scroll;
     transition: top 500ms;
+}
+.btn-close{
+    cursor: pointer;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    width: 25px;
+    height: 2px;
+    background: $nav;
+    transform: rotate(45deg);
+    transition: all 250ms;
+    &::after{
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        width: 25px;
+        height: 2px;
+        background: $nav;
+        transform: rotate(-90deg);
+        transition: all 250ms;
+    }
+    &:focus,
+    &:hover {
+    background: $nav-accent;
+    }
+}
+.btn-close:focus.btn-close::after,
+.btn-close:hover.btn-close::after{
+    background: $nav-accent;
 }
 .is-open {
     top: 0;
@@ -51,10 +85,10 @@
     align-items: center;
     color: $nav;
     font-weight: 400;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     transition: all 250ms;
     &:nth-child(even) {
-        margin: 15px 0;
+        margin: 20px 0;
     }
     &:hover,
     &:focus {
@@ -84,6 +118,7 @@
         height: 35px;
         border-radius: 50%;
         opacity: 0;
+        transition: all 250ms;
     }
 }
 .nav-link-svg{
@@ -104,11 +139,131 @@
     opacity: 0.4;
 }
 
+// Button 'Power'
 .nav__btn{
+    display: flex;
+    align-items: center;
+    margin-top: 80px;
+}
+.btn-power{
+    position: relative;
     width: 50px;
     height: 50px;
     border-radius: 10px;
+    background: #fff;
+    margin-right: 10px;
+    transition: all 250ms;
+    overflow: hidden;
+    &::after{
+        position: absolute;
+        top: -15px;
+        right: -13px;
+        content: '';
+        background: #fff;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        opacity: 0;
+        transition: all 250ms;
+    }
+    &:hover,
+    &:focus {
+    background: $accent;
+    box-shadow: $shadow-nav;
+    }
 }
-.btn-power{
+.btn-power:hover.btn-power::after,
+.btn-power:focus.btn-power::after {
+    opacity: 0.4;
+}
+.btn-power-icon{
+    fill: #9BAAD3;
+    transition: all 250ms;
+}
+.btn-power:hover > .btn-power-icon,
+.btn-power:focus > .btn-power-icon {
+    fill: #fff;
+}
+.btn-power-logout{
+    color: $nav;
+    font-weight: 400;
+    font-size: 0.8rem;
+    transition: all 250ms;
+}
+.btn-power:hover + .btn-power-logout,
+.btn-power:focus + .btn-power-logout {
+    color: $nav-accent;
+}
 
+@media screen and (min-width: 480px) {
+    .header{
+        position: relative;
+        box-sizing: border-box;
+        width: 131px;
+        height: 113px;
+        background: $bc-header;
+        font-family: 'Google Sans';
+    }
+    .header__burger{
+        display: block;
+        position: absolute;
+        left: calc(50% - 13px);
+        top: calc(50% - 10px);
+        background: transparent;
+        width: 25px;
+        cursor: pointer;
+    }
+    .header__nav{ 
+        top: 113px;
+        width: 131px;
+        min-width: auto;
+        height: auto;
+        padding: 56px 26px 34px;
+        overflow: hidden;
+    }
+    .btn-close{
+        display: none;
+    }
+    .nav-link{
+        flex-direction: column;
+        &:nth-child(even) {
+            margin: 30px 0;
+        }
+    }
+    .nav-link-icon{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: all 250ms;
+    margin-right: 10px;
+    overflow: hidden;
+
+    &::after{
+        position: absolute;
+        top: -15px;
+        right: -13px;
+        content: '';
+        background: #fff;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        opacity: 0;
+        transition: all 250ms;
+    }
+}
+    .nav-link-icon{
+        margin: 0 0 16px;
+    }
+
+    .nav__btn{
+        flex-direction: column;
+    }
+    .btn-power{
+        margin: 0 0 16px;
+    }
 }
