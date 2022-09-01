@@ -1,7 +1,7 @@
 .header{
     position: relative;
     box-sizing: border-box;
-    width: 100vw;
+    min-width: 100vw;
     height: 113px;
     background: $bc-header;
     font-family: 'Google Sans';
@@ -201,6 +201,7 @@
         box-sizing: border-box;
         width: 131px;
         height: 113px;
+        min-width: auto;
         background: $bc-header;
         font-family: 'Google Sans';
     }
