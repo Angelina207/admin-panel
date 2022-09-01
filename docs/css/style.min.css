@@ -301,102 +301,317 @@ body {
 }
 
 @font-face {
-  font-family: "Gilroy";
-  src: url("fonts/gilroy/Gilroy-Black.woff"), url("fonts/gilroy/Gilroy-Black.woff2");
+  font-family: "Google Sans";
+  src: url("../../fonts/google-sans/ProductSans-Black.woff") format("woff"), url("../../fonts/google-sans/ProductSans-Black.woff2") format("woff2");
   font-weight: 900;
+  font-display: swap;
 }
 @font-face {
-  font-family: "Gilroy";
-  src: url("/docs/fonts/gilroy/Gilroy-Extrabold.woff"), url("/docs/fonts/gilroy/Gilroy-Extrabold.woff2");
-  font-weight: 800;
-}
-@font-face {
-  font-family: "Gilroy";
-  src: url("/docs/fonts/gilroy/Gilroy-Heavy.woff"), url("/docs/fonts/gilroy/Gilroy-Heavy.woff2");
+  font-family: "Google Sans";
+  src: url("../../fonts/google sans/ProductSans-Bold.woff") format("woff"), url("../../fonts/google sans/ProductSans-Bold.woff2") format("woff2");
   font-weight: 700;
+  font-display: swap;
 }
 @font-face {
-  font-family: "Gilroy";
-  src: url("/docs/fonts/gilroy/Gilroy-Semibold.woff"), url("/docs/fonts/gilroy/Gilroy-Semibold.woff2");
-  font-weight: 600;
-}
-@font-face {
-  font-family: "Gilroy";
-  src: url("/docs/fonts/gilroy/Gilroy-Medium.woff"), url("/docs/fonts/gilroy/Gilroy-Medium.woff2");
+  font-family: "Google Sans";
+  src: url("../../fonts/google sans/ProductSans-Medium.woff") format("woff"), url("../../fonts/google sans/ProductSans-Medium.woff2") format("woff2");
   font-weight: 500;
+  font-display: swap;
 }
 @font-face {
-  font-family: "Gilroy";
-  src: url("/docs/fonts/gilroy/Gilroy-Regular.woff"), url("/docs/fonts/gilroy/Gilroy-Regular.woff2");
+  font-family: "Google Sans";
+  src: url("../../fonts/google sans/ProductSans-Regular.woff") format("woff"), url("../../fonts/google sans/ProductSans-Regular.woff2") format("woff2");
   font-weight: 400;
+  font-display: swap;
 }
 @font-face {
-  font-family: "Gilroy";
-  src: url("/docs/fonts/gilroy/Gilroy-Light.woff"), url("/docs/fonts/gilroy/Gilroy-Light.woff2");
-  font-weight: 300;
-}
-@font-face {
-  font-family: "Gilroy";
-  src: url("/docs/fonts/gilroy/Gilroy-Thin.woff"), url("/docs/fonts/gilroy/Gilroy-Thin.woff2");
+  font-family: "Google Sans";
+  src: url("../../fonts/google sans/ProductSans-Thin.woff") format("woff"), url("../../fonts/google sans/ProductSans-Thin.woff2") format("woff2");
   font-weight: 100;
+  font-display: swap;
 }
-@font-face {
+.header {
+  position: relative;
+  box-sizing: border-box;
+  min-width: 100vw;
+  height: 113px;
+  background: #393D46;
   font-family: "Google Sans";
-  src: url("/docs/fonts/google sans/ProductSans-Black.woff"), url("/docs/fonts/google sans/ProductSans-Black.woff2");
-  font-weight: 900;
 }
-@font-face {
-  font-family: "Google Sans";
-  src: url("/docs/fonts/google sans/ProductSans-Bold.woff"), url("/docs/fonts/google sans/ProductSans-Bold.woff2");
-  font-weight: 700;
+
+.header__burger {
+  display: block;
+  position: absolute;
+  left: 20px;
+  top: calc(50% - 10px);
+  background: transparent;
+  width: 25px;
+  cursor: pointer;
 }
-@font-face {
-  font-family: "Google Sans";
-  src: url("/docs/fonts/google sans/ProductSans-Medium.woff"), url("/docs/fonts/google sans/ProductSans-Medium.woff2");
-  font-weight: 500;
+
+.burger-elem {
+  width: 100%;
+  height: 2px;
+  background: #fff;
 }
-@font-face {
-  font-family: "Google Sans";
-  src: url("/docs/fonts/google sans/ProductSans-Regular.woff"), url("/docs/fonts/google sans/ProductSans-Regular.woff2");
+.burger-elem ~ .line2 {
+  margin: 5px 0;
+}
+.burger-elem ~ .line3 {
+  width: 50%;
+}
+
+.header__nav {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  position: absolute;
+  top: -1000%;
+  left: 0;
+  width: 100vw;
+  min-width: 320px;
+  height: 100vh;
+  background: rgb(244, 245, 250);
+  background: linear-gradient(90deg, rgb(244, 245, 250) 48%, rgb(234, 236, 241) 100%, rgb(216, 218, 225) 100%, rgb(214, 216, 223) 100%);
+  padding: 80px 20px 20px 20px;
+  overflow-y: scroll;
+  transition: top 500ms;
+}
+
+.btn-close {
+  cursor: pointer;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 25px;
+  height: 2px;
+  background: #7987A5;
+  transform: rotate(45deg);
+  transition: all 250ms;
+}
+.btn-close::after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 25px;
+  height: 2px;
+  background: #7987A5;
+  transform: rotate(-90deg);
+  transition: all 250ms;
+}
+.btn-close:focus, .btn-close:hover {
+  background: #1C295D;
+}
+
+.btn-close:focus.btn-close::after,
+.btn-close:hover.btn-close::after {
+  background: #1C295D;
+}
+
+.is-open {
+  top: 0;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  color: #7987A5;
   font-weight: 400;
+  font-size: 0.8rem;
+  transition: all 250ms;
 }
-@font-face {
-  font-family: "Google Sans";
-  src: url("/docs/fonts/google sans/ProductSans-Thin.woff"), url("/docs/fonts/google sans/ProductSans-Thin.woff2");
-  font-weight: 100;
+.nav-link:nth-child(even) {
+  margin: 20px 0;
 }
-@font-face {
-  font-family: "Google Sans";
-  src: url("/docs/fonts/sofia pro/Sofia Pro Black Az.woff"), url("/docs/fonts/sofia pro/Sofia Pro Black Az.woff2");
-  font-weight: 900;
+.nav-link:hover, .nav-link:focus {
+  color: #1C295D;
 }
-@font-face {
-  font-family: "Google Sans";
-  src: url("/docs/fonts/sofia pro/Sofia Pro Bold Az.woff"), url("/docs/fonts/sofia pro/Sofia Pro Bold Az.woff2");
-  font-weight: 700;
+
+.nav-link-icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #fff;
+  transition: all 250ms;
+  margin-right: 10px;
+  overflow: hidden;
 }
-@font-face {
-  font-family: "Google Sans";
-  src: url("/docs/fonts/sofia pro/Sofia Pro Semi Bold Az.woff"), url("/docs/fonts/sofia pro/Sofia Pro Semi Bold Az.woff2");
-  font-weight: 600;
+.nav-link-icon::after {
+  position: absolute;
+  top: -15px;
+  right: -13px;
+  content: "";
+  background: #fff;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 250ms;
 }
-@font-face {
-  font-family: "Google Sans";
-  src: url("/docs/fonts/sofia pro/Sofia Pro Medium Az.woff"), url("/docs/fonts/sofia pro/Sofia Pro Medium Az.woff2");
-  font-weight: 500;
+
+.nav-link-svg {
+  fill: #9BAAD3;
+  transition: all 250ms;
 }
-@font-face {
-  font-family: "Google Sans";
-  src: url("/docs/fonts/sofia pro/Sofia Pro Regular Az.woff"), url("/docs/fonts/sofia pro/Sofia Pro Regular Az.woff2");
+
+.nav-link:hover > .nav-link-icon,
+.nav-link:focus > .nav-link-icon {
+  background-color: #FF6647;
+  box-shadow: 0px 10px 20px rgba(88, 92, 229, 0.25);
+}
+
+.nav-link:hover > .nav-link-icon > .nav-link-svg,
+.nav-link:focus > .nav-link-icon > .nav-link-svg {
+  fill: #fff;
+}
+
+.nav-link:hover > .nav-link-icon::after,
+.nav-link:focus > .nav-link-icon::after {
+  opacity: 0.4;
+}
+
+.nav__btn {
+  display: flex;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.btn-power {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background: #fff;
+  margin-right: 10px;
+  transition: all 250ms;
+  overflow: hidden;
+}
+.btn-power::after {
+  position: absolute;
+  top: -15px;
+  right: -13px;
+  content: "";
+  background: #fff;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 250ms;
+}
+.btn-power:hover, .btn-power:focus {
+  background: #FF6647;
+  box-shadow: 0px 10px 20px rgba(88, 92, 229, 0.25);
+}
+
+.btn-power:hover.btn-power::after,
+.btn-power:focus.btn-power::after {
+  opacity: 0.4;
+}
+
+.btn-power-icon {
+  fill: #9BAAD3;
+  transition: all 250ms;
+}
+
+.btn-power:hover > .btn-power-icon,
+.btn-power:focus > .btn-power-icon {
+  fill: #fff;
+}
+
+.btn-power-logout {
+  color: #7987A5;
   font-weight: 400;
+  font-size: 0.8rem;
+  transition: all 250ms;
 }
-@font-face {
-  font-family: "Google Sans";
-  src: url("/docs/fonts/sofia pro/Sofia Pro Light Az.woff"), url("/docs/fonts/sofia pro/Sofia Pro Light Az.woff2");
-  font-weight: 300;
+
+.btn-power:hover + .btn-power-logout,
+.btn-power:focus + .btn-power-logout {
+  color: #1C295D;
 }
-@font-face {
-  font-family: "Google Sans";
-  src: url("/docs/fonts/sofia pro/Sofia Pro ExtraLight Az.woff"), url("/docs/fonts/sofia pro/Sofia Pro ExtraLight Az.woff2");
-  font-weight: 100;
+
+@media screen and (min-width: 480px) {
+  .header {
+    position: relative;
+    box-sizing: border-box;
+    width: 131px;
+    height: 113px;
+    min-width: auto;
+    background: #393D46;
+    font-family: "Google Sans";
+  }
+
+  .header__burger {
+    display: block;
+    position: absolute;
+    left: calc(50% - 13px);
+    top: calc(50% - 10px);
+    background: transparent;
+    width: 25px;
+    cursor: pointer;
+  }
+
+  .header__nav {
+    top: 113px;
+    width: 131px;
+    min-width: auto;
+    height: auto;
+    padding: 56px 26px 34px;
+    overflow: hidden;
+  }
+
+  .btn-close {
+    display: none;
+  }
+
+  .nav-link {
+    flex-direction: column;
+  }
+  .nav-link:nth-child(even) {
+    margin: 30px 0;
+  }
+
+  .nav-link-icon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: all 250ms;
+    margin-right: 10px;
+    overflow: hidden;
+  }
+  .nav-link-icon::after {
+    position: absolute;
+    top: -15px;
+    right: -13px;
+    content: "";
+    background: #fff;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 250ms;
+  }
+
+  .nav-link-icon {
+    margin: 0 0 16px;
+  }
+
+  .nav__btn {
+    flex-direction: column;
+  }
+
+  .btn-power {
+    margin: 0 0 16px;
+  }
 }
