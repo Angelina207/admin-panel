@@ -45,6 +45,7 @@
     padding: 80px 20px 20px 20px;
     overflow-y: scroll;
     transition: top 500ms;
+    z-index: 2;
 }
 .btn-close{
     cursor: pointer;
@@ -221,6 +222,7 @@
         height: auto;
         padding: 56px 26px 34px;
         overflow: hidden;
+        z-index: 0;
     }
     .btn-close{
         display: none;

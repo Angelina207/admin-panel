@@ -1,0 +1,187 @@
+.filter{
+    font-family: 'Gilroy';
+}
+.filter-content{
+    box-sizing: border-box;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100vw;
+    min-width: 320px;
+    height: 300px;
+    padding: 60px 20px;
+    background: $bc-filter;
+    transition: all 500ms;
+    &.is-open{
+        top: 0;
+    }
+}
+.user-name{
+    color: #000;
+    font-size: 2rem;
+    font-weight: 600;
+}
+.search-form{
+    max-width: 326px;
+    margin: 0 auto;
+}
+.search-label{
+    position: relative;
+}
+.search-svg{
+    position: absolute;
+    top: 0;
+    left: 15px;
+    fill: $main-tab;
+}
+.search-field{
+    width: calc(100% - 60px);
+    height: 52px;
+    background: #FFFFFF;
+    box-shadow: 0px 24px 24px rgba(0, 0, 0, 0.02);
+    border-radius: 26px;
+    outline: none;
+    border: none;
+    padding: 0 15px 0 45px;
+    margin-top: 40px;
+    &::placeholder{
+        color: $main-tab;
+        font-size: 0.8rem;
+        font-weight: 400;
+    }
+}
+.config-btn{
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: $accent;
+    transition: box-shadow 250ms;
+    &:active,
+    &:hover {
+        box-shadow: 0px 4.2069px 4.2069px rgba(255, 102, 71, 0.25);
+    }
+}
+
+// Overlay
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    z-index: -1;
+    opacity: 0;
+}
+
+// Arrow to open/close
+.arrow{
+    cursor: pointer;
+    position: absolute;
+    top: 130px;
+    left: 50%;
+    transition: top 500ms;
+}
+.filter-content.is-open ~ .arrow{
+    top: 290px;
+}
+.arrow span{
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-bottom: solid 2px $bc-header;
+    border-right: solid 2px $bc-header;
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: animate 2s infinite;
+    transition: top 1000ms;
+}
+.filter-content.is-open ~ .arrow{
+    transform: rotate(180deg);
+}
+.arrow span:nth-child(1) {
+    animation-delay: -0.2s;
+}
+.arrow span:nth-child(2) {
+    animation-delay: -0.4s;
+}
+@keyframes animate{
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px, -20px);
+    }
+}
+
+@media screen and(min-width: 480px) {
+    .filter-content{
+        z-index: 1;
+    }
+    .filter::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 130px;
+        display: block;
+        background: $bc-filter;
+        height: 113px;
+        width: calc(100% - 130px);
+        z-index: -2;
+    }
+    .arrow{
+        top: 60px;
+        left: 63%;
+        z-index: 1;
+    }
+    .filter-content.is-open ~ .arrow{
+        left: 50%;
+    }
+    .overlay{
+        z-index: 0;
+    }
+}
+
+@media screen and(min-width: 580px) {
+    .filter-wrapp{
+        display: flex;
+    }
+    .filter::after{
+        display: none;
+    }
+    .arrow{
+        display: none;
+    }
+    .overlay{
+        display: none;
+    }
+    .filter-content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        top: 0;
+        left: 131px;
+        width: calc(100% - 131px);
+        height: 113px;
+        padding: 0px;
+    }
+    .user-name{
+        margin: 0 0 0 20px;
+    }
+    .search-form{
+        margin: 0;
+    }
+    .search-field{
+        margin: 0;
+    }
+    .config-btn{
+        position: static;
+        margin: 0 20px 0 9px;
+    }
+}
+@media screen and(min-width: 768px){
+    .search-field{
+        width: calc(326px - 60px);
+    }
+}
