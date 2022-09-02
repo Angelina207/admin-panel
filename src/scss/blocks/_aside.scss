@@ -1,0 +1,12 @@
+.aside-content{
+    box-sizing: border-box;
+    min-width: 320px;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(251,250,249);
+    background: linear-gradient(31deg, rgba(251,250,249,1) 25%, rgba(238,248,246,1) 100%);
+    z-index: 2;
+    padding: 20px;
+}
