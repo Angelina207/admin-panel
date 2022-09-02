@@ -120,11 +120,49 @@
         content: '';
         position: absolute;
         top: 0;
-        left: 0;
+        left: 130px;
         display: block;
-       background: $bc-filter;
-       height: 113px;
-       width: 100%;
-       z-index: -2;
+        background: $bc-filter;
+        height: 113px;
+        width: calc(100% - 130px);
+        z-index: -2;
+    }
+    .arrow{
+        top: 60px;
+        left: 60%;
+    }
+}
+
+@media screen and(min-width: 580px) {
+    .filter::after{
+        display: none;
+    }
+    .arrow{
+        display: none;
+    }
+    .overlay{
+        display: none;
+    }
+    .filter-content{
+        display: flex;
+        align-items: center;
+        top: 0;
+        left: 131px;
+        width: calc(100% - 131px);
+        height: 113px;
+        padding: 0px;
+    }
+    .user-name{
+        margin: 0 20px 0 20px;
+    }
+    .search-form{
+        margin: 0;
+    }
+    .search-field{
+        margin: 0;
+    }
+    .config-btn{
+        position: static;
+        margin-left: 9px;
     }
 }
