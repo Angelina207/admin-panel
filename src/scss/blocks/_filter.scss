@@ -186,3 +186,9 @@
         width: calc(326px - 60px);
     }
 }
+@media screen and(min-width: 1280px){
+    .filter-wrapp{
+        position: relative;
+        right: 406px;
+    }
+}

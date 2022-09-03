@@ -223,5 +223,24 @@
     }
 }
 .photo-list{
+    padding-top: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+.photo-list-item{
+    cursor: pointer;
+}
+.photo-list-img{
+    border-radius: 10px;
+    width: 111px;
+    height: 111px;
+}
 
+@media screen and(min-width: 480px) {
+    .aside-content{
+        width: 406px;
+        box-shadow: -4px 14px 24px rgba(0, 0, 0, 0.06);
+    }
 }
