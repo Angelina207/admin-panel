@@ -1,12 +1,227 @@
+// Apartment block
 .aside-content{
     box-sizing: border-box;
     min-width: 320px;
     width: 100vw;
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
     background: rgb(251,250,249);
     background: linear-gradient(31deg, rgba(251,250,249,1) 25%, rgba(238,248,246,1) 100%);
     z-index: 2;
     padding: 20px;
+}
+// .aside__apart{
+
+// }
+.apart-header{
+    position: relative;
+    width: 100%;
+}
+.apart-img{
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+}
+.apart-btn{
+    position: absolute;
+    top: 13px;
+    left: 10px;
+    font-size: 0.8rem;
+    font-weight: 400;
+    padding: 10px;
+    border-radius: 5px;
+    background: #fff;
+    color: $aside;
+    transition: all 250ms;
+    &:hover,
+    &:focus {
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+    }
+}
+
+// Btn to show apartment
+// .apart__btn-slider{
+
+// }
+.btn-slider{
+    position: absolute;
+    top: calc(50% - 10px);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgba(196, 196, 196, 0.8);
+    transition: all 250ms;
+    &:nth-child(1) {
+        left: 15px;
+    }
+    &:nth-child(2) {
+        right: 15px;
+    }
+    &:hover,
+    &:focus{
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+    }
+    &::after{
+        position: absolute;
+        top: calc(50% - 4px);
+        left: calc(50% - 3.5px);
+        display: block;
+        content: '';
+        width: 7px;
+        height: 7px;
+        border-bottom: 2px solid #fff;
+        border-left: 2px solid #fff;
+        transform: rotate(45deg);
+    }
+    &:nth-child(2)::after{
+        transform: rotate(-135deg);
+        left: calc(50% - 6px);
+    }
+}
+
+// Address
+.apart-address{
+    font-weight: 400;
+    font-size: 1.2rem;
+    padding-top: 27px;
+    line-height: 31px;
+}
+
+// Info block
+.apart__info{
+    padding-top: 16px;
+}
+
+// Info head
+.info-head{
+    display: flex;
+    justify-content: space-between;
+}
+.info-owner{
+    color: $aside;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 25px;
+}
+.info-btn-note{
+    background: transparent;
+}
+
+// Info body
+.info-body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 27px;
+}
+.info__btn-act{
+    display: flex;
+}
+.btn-act{
+    box-sizing: border-box;
+    position: relative;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #fff;
+    transition: all 250ms;
+    box-shadow: -4px 14px 24px rgba(0, 0, 0, 0.06);
+    &:nth-child(2) {
+        margin: 0 10px;
+    }
+    &:hover,
+    &:focus {
+        border: 1px solid $accent-blue;
+    }
+}
+.btn-act-svg{
+    position: absolute;
+    top: calc(50% - 6px);
+    left: calc(50% - 6px);
+    fill: $aside;
+    transition: all 250ms;
+}
+.btn-act:hover > .btn-act-svg,
+.btn-act:focus > .btn-act-svg{
+    fill: $accent-blue;
+}
+.info-cost{
+    font-weight: 800;
+    font-size: 1.3rem;
+    color: $accent-blue;
+    line-height: 31px;
+}
+
+// Info footer
+.info-foo{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 27px;
+}
+.info-foo-block{
+    display: flex;
+    align-items: center;
+}
+.info-apart{
+    font-size: 1rem;
+    font-weight: 400;
+    color: $aside;
+    line-height: 25px;
+    padding-left: 4px;
+}
+
+// Map
+.aside__map{
+    min-width: calc(320px - 40px);
+    max-width: 397px;
+    padding-top: 32px;
+}
+.map{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: -4px 14px 24px rgba(0, 0, 0, 0.06);
+}
+
+// Block photo
+.aside__photo{
+    padding-top: 27px;
+}
+.photo-head{
+    display: flex;
+    justify-content: space-between;
+}
+.photo-title{
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 31px;
+}
+.photo-btn-more{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: -4px 14px 24px rgba(0, 0, 0, 0.06);
+    &::before,
+    &::after,
+    & > .btn-more-dots{
+        width: 4px;
+        height: 4px;
+        content: '';
+        background: $accent-blue;
+        display: block;
+        border-radius: 50%;
+    }
+    &::before,
+    &::after{
+        margin: 0 2px;
+    }
+}
+.photo-list{
+
 }
