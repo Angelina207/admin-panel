@@ -1,6 +1,6 @@
 export function header() {
     const nav = document.querySelector('.header__nav');
-    const burger = document.querySelector('.header__burger').addEventListener('click', isOpenNav);
+    const burger = document.querySelector('.btn__burger').addEventListener('click', isOpenNav);
     const burgerClose = document.querySelector('.nav__btn-close').addEventListener('click', isCloseNav);
 
     function isOpenNav() {

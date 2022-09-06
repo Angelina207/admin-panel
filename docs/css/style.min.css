@@ -335,18 +335,20 @@ body {
 }
 .header {
   position: relative;
-  box-sizing: border-box;
   min-width: 100vw;
-  height: 113px;
   background: #393D46;
   font-family: "Google Sans";
+  padding: 40px 0;
 }
 
-.header__burger {
+.header__btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn__burger {
   display: block;
-  position: absolute;
-  left: 20px;
-  top: calc(50% - 10px);
   background: transparent;
   width: 25px;
   cursor: pointer;
@@ -362,6 +364,29 @@ body {
 }
 .burger-elem ~ .line3 {
   width: 50%;
+}
+
+.aside-btn-open {
+  position: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: transparent;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+.aside-btn-open::before, .aside-btn-open::after, .aside-btn-open > .aside-btn-dot {
+  width: 4px;
+  height: 4px;
+  content: "";
+  background: #fff;
+  display: block;
+  border-radius: 50%;
+}
+.aside-btn-open::before, .aside-btn-open::after {
+  margin: 0 2px;
 }
 
 .header__nav {
@@ -837,14 +862,46 @@ body {
 .aside-content {
   box-sizing: border-box;
   min-width: 320px;
-  width: 100vw;
+  width: 100%;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -1500px;
+  left: 0;
   background: rgb(251, 250, 249);
   background: linear-gradient(31deg, rgb(251, 250, 249) 25%, rgb(238, 248, 246) 100%);
   z-index: 2;
-  padding: 20px;
+  padding: 60px 20px 20px;
+}
+
+.button-close-aside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 10px;
+  left: calc(50% - 17.5px);
+  width: 36px;
+  height: 36px;
+  background: transparent;
+  border: 1px solid #757575;
+  border-radius: 50%;
+}
+.button-close-aside::before, .button-close-aside::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: #757575;
+}
+.button-close-aside::before {
+  transform: rotate(45deg);
+}
+.button-close-aside::after {
+  transform: rotate(-45deg);
+}
+
+.is-open {
+  top: 0;
 }
 
 .apart-header {
