@@ -439,7 +439,7 @@ body {
   background: #1C295D;
 }
 
-.is-open {
+.is-open-nav {
   top: 0;
 }
 
@@ -576,14 +576,14 @@ body {
     font-family: "Google Sans";
   }
 
-  .header__burger {
-    display: block;
+  .btn__burger {
     position: absolute;
     left: calc(50% - 13px);
     top: calc(50% - 10px);
-    background: transparent;
-    width: 25px;
-    cursor: pointer;
+  }
+
+  .btn__aside-btn {
+    display: none;
   }
 
   .header__nav {
@@ -659,7 +659,7 @@ body {
   height: 300px;
   padding: 60px 20px;
   background: #F6F7FB;
-  transition: all 500ms;
+  transition: all 300ms;
 }
 .filter-content.is-open {
   top: 0;
@@ -727,7 +727,8 @@ body {
   min-width: 320px;
   background: #000;
   z-index: -1;
-  opacity: 0;
+  opacity: 0.4;
+  display: none;
 }
 
 .arrow {
@@ -816,10 +817,6 @@ body {
     display: none;
   }
 
-  .overlay {
-    display: none;
-  }
-
   .filter-content {
     display: flex;
     align-items: center;
@@ -870,6 +867,7 @@ body {
   background: linear-gradient(31deg, rgb(251, 250, 249) 25%, rgb(238, 248, 246) 100%);
   z-index: 2;
   padding: 60px 20px 20px;
+  transition: all 500ms;
 }
 
 .button-close-aside {
@@ -1133,5 +1131,22 @@ body {
   .aside-content {
     width: 406px;
     box-shadow: -4px 14px 24px rgba(0, 0, 0, 0.06);
+    left: 0;
+    z-index: -1;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .aside-content {
+    width: 406px;
+    box-shadow: -4px 14px 24px rgba(0, 0, 0, 0.06);
+    left: auto;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    padding: 20px;
+  }
+
+  .aside__button {
+    display: none;
   }
 }

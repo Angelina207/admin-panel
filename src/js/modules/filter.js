@@ -5,7 +5,7 @@ export function filter() {
 
     function openFilter() {
         filter.classList.toggle('is-open');
-        filter.classList.contains('is-open') ? overlay.style.opacity = '0.4' : overlay.style.opacity = '0';
+        filter.classList.contains('is-open') ? overlay.style.display = 'block' : overlay.style.display = 'none';
 
     }
 }

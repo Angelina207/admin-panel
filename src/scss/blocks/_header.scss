@@ -1,8 +1,6 @@
 .header{
     position: relative;
-    // box-sizing: border-box;
     min-width: 100vw;
-    // height: 113px;
     background: $bc-header;
     font-family: 'Google Sans';
     padding: 40px 0;
@@ -106,7 +104,7 @@
 .btn-close:hover.btn-close::after{
     background: $nav-accent;
 }
-.is-open {
+.is-open-nav {
     top: 0;
 }
 .nav-link{
@@ -234,14 +232,13 @@
         background: $bc-header;
         font-family: 'Google Sans';
     }
-    .header__burger{
-        display: block;
+    .btn__burger{
         position: absolute;
         left: calc(50% - 13px);
         top: calc(50% - 10px);
-        background: transparent;
-        width: 25px;
-        cursor: pointer;
+    }
+    .btn__aside-btn{
+        display: none;
     }
     .header__nav{ 
         top: 113px;

@@ -4,10 +4,10 @@ export function header() {
     const burgerClose = document.querySelector('.nav__btn-close').addEventListener('click', isCloseNav);
 
     function isOpenNav() {
-        nav.classList.add('is-open');
+        nav.classList.add('is-open-nav');
     }
     function isCloseNav() {
-        if ( nav.classList.contains('is-open'))
-            nav.classList.remove('is-open');
+        if ( nav.classList.contains('is-open-nav'))
+            nav.classList.remove('is-open-nav');
     }
 }
