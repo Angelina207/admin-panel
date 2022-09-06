@@ -1,18 +1,18 @@
 .header{
     position: relative;
-    box-sizing: border-box;
     min-width: 100vw;
-    height: 113px;
     background: $bc-header;
     font-family: 'Google Sans';
+    padding: 40px 0;
 }
-
+.header__btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 // Burger
-.header__burger{
+.btn__burger{
     display: block;
-    position: absolute;
-    left: 20px;
-    top: calc(50% - 10px);
     background: transparent;
     width: 25px;
     cursor: pointer;
@@ -29,6 +29,32 @@
     }
 }
 
+// Button to open aside
+.aside-btn-open{
+    position: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    &::before,
+    &::after,
+    & > .aside-btn-dot{
+        width: 4px;
+        height: 4px;
+        content: '';
+        background: #fff;
+        display: block;
+        border-radius: 50%;
+    }
+    &::before,
+    &::after{
+        margin: 0 2px;
+    }
+}
 // Navigation
 .header__nav{ 
     display: flex;
@@ -78,7 +104,7 @@
 .btn-close:hover.btn-close::after{
     background: $nav-accent;
 }
-.is-open {
+.is-open-nav {
     top: 0;
 }
 .nav-link{
@@ -206,14 +232,13 @@
         background: $bc-header;
         font-family: 'Google Sans';
     }
-    .header__burger{
-        display: block;
+    .btn__burger{
         position: absolute;
         left: calc(50% - 13px);
         top: calc(50% - 10px);
-        background: transparent;
-        width: 25px;
-        cursor: pointer;
+    }
+    .btn__aside-btn{
+        display: none;
     }
     .header__nav{ 
         top: 113px;

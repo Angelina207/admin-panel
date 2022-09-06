@@ -1,13 +1,13 @@
 export function header() {
     const nav = document.querySelector('.header__nav');
-    const burger = document.querySelector('.header__burger').addEventListener('click', isOpenNav);
+    const burger = document.querySelector('.btn__burger').addEventListener('click', isOpenNav);
     const burgerClose = document.querySelector('.nav__btn-close').addEventListener('click', isCloseNav);
 
     function isOpenNav() {
-        nav.classList.add('is-open');
+        nav.classList.add('is-open-nav');
     }
     function isCloseNav() {
-        if ( nav.classList.contains('is-open'))
-            nav.classList.remove('is-open');
+        if ( nav.classList.contains('is-open-nav'))
+            nav.classList.remove('is-open-nav');
     }
 }

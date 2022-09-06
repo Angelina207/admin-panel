@@ -11,7 +11,7 @@
     height: 300px;
     padding: 60px 20px;
     background: $bc-filter;
-    transition: all 500ms;
+    transition: all 300ms;
     &.is-open{
         top: 0;
     }
@@ -72,9 +72,11 @@
     left: 0;
     height: 100%;
     width: 100%;
+    min-width: 320px;
     background: #000;
     z-index: -1;
-    opacity: 0;
+    opacity: 0.4;
+    display: none;
 }
 
 // Arrow to open/close
@@ -153,9 +155,6 @@
     .arrow{
         display: none;
     }
-    .overlay{
-        display: none;
-    }
     .filter-content{
         display: flex;
         align-items: center;
@@ -183,5 +182,11 @@
 @media screen and(min-width: 768px){
     .search-field{
         width: calc(326px - 60px);
+    }
+}
+@media screen and(min-width: 1280px){
+    .filter-wrapp{
+        position: relative;
+        right: 406px;
     }
 }
