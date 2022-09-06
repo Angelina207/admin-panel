@@ -1,0 +1,125 @@
+.tab{
+    padding: 60px 0;
+    background: #FCFCFCFF;
+    overflow-x: hidden;
+}
+// Carousel buttons
+.tab__carousel-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.carousel-wrapp{
+    display: flex;
+}
+.carousel-btn {
+    display: block;
+    width: 13px;
+    height: 13px;
+    padding: 5px;
+    margin: 5px;
+    background: transparent;
+    border-top: 2px solid #000;
+    border-right: 2px solid #000;
+    transform: rotate(45deg);
+}
+.btn-left{
+    transform: rotate(-135deg);
+}
+
+// Tab buttons
+.tab-content-wrapp{
+    display: flex;
+    padding-top: 64px;
+}
+.tab__tab-btn{
+    writing-mode: vertical-lr;
+    transform: rotate(-180deg);
+}
+.tab-btn-swich{
+    display: inline-block;
+    color: #353646;
+    opacity: 0.4;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 250ms;
+    &:hover,
+    &:focus {
+        color: $accent;
+        opacity: 1;
+    }
+    &:nth-child(2) {
+        padding: 44px 0px;
+    }
+}
+
+// The first content
+.tab-content{
+    display: flex;
+}
+
+// ================
+.tab__carousel:nth-child(even){
+    padding: 0 30px;
+}
+.carousel__card{
+    box-shadow: 0px 100px 80px rgba(153, 165, 236, 0.05), 0px 64.8148px 46.8519px rgba(153, 165, 236, 0.037963), 0px 38.5185px 25.4815px rgba(153, 165, 236, 0.0303704), 0px 20px 13px rgba(153, 165, 236, 0.025), 0px 8.14815px 6.51852px rgba(153, 165, 236, 0.0196296), 0px 1.85185px 3.14815px rgba(153, 165, 236, 0.012037);
+    border-radius: 25px;
+    padding: 12px 12px 24px;
+    background: #fff;
+}
+.card__img{
+    width: 218px;
+    height: auto;
+}
+.img-country{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+// ================
+.card__mark{
+
+}
+.mark-place-btn{
+
+}
+
+// ================
+.card__location{
+    padding-top: 10px;
+}
+.location-wrapp{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+.location-map{
+    display: flex;
+    align-items: center;
+}
+.location-title{
+    color: #353646;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 20px;
+}
+
+// ================
+.location-country{
+    color: #353646;
+    opacity: 0.4;
+    line-height: 20px;
+    font-weight: 400;
+    font-size: 0.9rem;
+    padding-left: 5px;
+}
+.location-cost{
+    color: $accent-green;
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 20px;
+}
