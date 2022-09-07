@@ -14,6 +14,7 @@
     transition: all 300ms;
     &.is-open{
         top: 0;
+        z-index: 3;
     }
 }
 .user-name{
@@ -74,7 +75,7 @@
     width: 100%;
     min-width: 320px;
     background: #000;
-    z-index: -1;
+    z-index: 2;
     opacity: 0.4;
     display: none;
 }
@@ -86,6 +87,7 @@
     top: 130px;
     left: 50%;
     transition: top 500ms;
+    z-index: 3;
 }
 .filter-content.is-open ~ .arrow{
     top: 290px;

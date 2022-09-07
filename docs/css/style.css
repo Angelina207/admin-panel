@@ -413,7 +413,7 @@ body {
   padding: 80px 20px 20px 20px;
   overflow-y: scroll;
   transition: top 500ms;
-  z-index: 2;
+  z-index: 4;
 }
 
 .btn-close {
@@ -672,6 +672,7 @@ body {
 }
 .filter-content.is-open {
   top: 0;
+  z-index: 3;
 }
 
 .user-name {
@@ -735,7 +736,7 @@ body {
   width: 100%;
   min-width: 320px;
   background: #000;
-  z-index: -1;
+  z-index: 2;
   opacity: 0.4;
   display: none;
 }
@@ -746,6 +747,7 @@ body {
   top: 130px;
   left: 50%;
   transition: top 500ms;
+  z-index: 3;
 }
 
 .filter-content.is-open ~ .arrow {
@@ -866,15 +868,18 @@ body {
   }
 }
 .tab {
+  position: relative;
   padding: 60px 0;
   background: #fcfcfc;
   overflow-x: hidden;
 }
 
 .tab__carousel-head {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 2;
 }
 
 .carousel-wrapp {
@@ -898,13 +903,25 @@ body {
 }
 
 .tab-content-wrapp {
+  position: relative;
   display: flex;
+  align-items: center;
   padding-top: 64px;
 }
 
 .tab__tab-btn {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: absolute;
+  left: -20px;
   writing-mode: vertical-lr;
   transform: rotate(-180deg);
+  z-index: 1;
+  background: #fcfcfc;
+  background: linear-gradient(-90deg, rgb(252, 252, 252) 68%, rgba(255, 255, 255, 0) 100%);
+  height: calc(100% + 50px);
+  width: 70px;
 }
 
 .tab-btn-swich {
@@ -920,11 +937,25 @@ body {
   color: #FF6647;
   opacity: 1;
 }
-.tab-btn-swich:nth-child(2) {
-  padding: 44px 0px;
+
+.tab-is-active {
+  color: #FF6647;
+  opacity: 1;
+}
+
+.tab__wave {
+  position: absolute;
+  right: -18px;
+  top: calc(50% - 65px);
+}
+
+.wave-svg {
+  transform: rotate(180deg);
 }
 
 .tab-content {
+  position: relative;
+  left: 70px;
   display: flex;
 }
 
@@ -933,6 +964,7 @@ body {
 }
 
 .carousel__card {
+  position: relative;
   box-shadow: 0px 100px 80px rgba(153, 165, 236, 0.05), 0px 64.8148px 46.8519px rgba(153, 165, 236, 0.037963), 0px 38.5185px 25.4815px rgba(153, 165, 236, 0.0303704), 0px 20px 13px rgba(153, 165, 236, 0.025), 0px 8.14815px 6.51852px rgba(153, 165, 236, 0.0196296), 0px 1.85185px 3.14815px rgba(153, 165, 236, 0.012037);
   border-radius: 25px;
   padding: 12px 12px 24px;
@@ -941,14 +973,32 @@ body {
 
 .card__img {
   width: 218px;
-  height: auto;
+  height: 145px;
 }
 
 .img-country {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
   border-radius: 20px;
+}
+
+.card__mark {
+  position: absolute;
+  top: 140px;
+  right: 21px;
+}
+
+.mark-place-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #FF6647;
+  border: 2px solid #fff;
+  box-shadow: 0px 4.2069px 4.2069px rgba(255, 102, 71, 0.25);
 }
 
 .card__location {
@@ -989,6 +1039,21 @@ body {
   line-height: 20px;
 }
 
+@media screen and (min-width: 480px) {
+  .tab {
+    width: calc(100% - 131px);
+    left: 131px;
+  }
+
+  .container {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .tab__tab-btn {
+    left: -30px;
+  }
+}
 .aside-content {
   box-sizing: border-box;
   min-width: 320px;
@@ -998,7 +1063,7 @@ body {
   left: 0;
   background: rgb(251, 250, 249);
   background: linear-gradient(31deg, rgb(251, 250, 249) 25%, rgb(238, 248, 246) 100%);
-  z-index: 2;
+  z-index: 3;
   padding: 60px 20px 20px;
   transition: all 500ms;
 }

@@ -1,13 +1,16 @@
 .tab{
+    position: relative;
     padding: 60px 0;
     background: #FCFCFCFF;
     overflow-x: hidden;
 }
 // Carousel buttons
 .tab__carousel-head{
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 2;
 }
 .carousel-wrapp{
     display: flex;
@@ -29,12 +32,24 @@
 
 // Tab buttons
 .tab-content-wrapp{
+    position: relative;
     display: flex;
+    align-items: center;
     padding-top: 64px;
 }
 .tab__tab-btn{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    left: -20px;
     writing-mode: vertical-lr;
     transform: rotate(-180deg);
+    z-index: 1;
+    background: #FCFCFCFF;
+    background: linear-gradient(-90deg, rgba(252,252,252,1) 68%, rgba(255,255,255,0) 100%);
+    height: calc(100% + 50px); 
+    width: 70px;
 }
 .tab-btn-swich{
     display: inline-block;
@@ -49,21 +64,33 @@
         color: $accent;
         opacity: 1;
     }
-    &:nth-child(2) {
-        padding: 44px 0px;
-    }
 }
-
+.tab-is-active{
+    color: $accent;
+    opacity: 1;
+}
+.tab__wave{
+    position: absolute;
+    right: -18px;
+    top: calc(50% - 65px);
+}
+.wave-svg{
+    transform: rotate(180deg);
+}
 // The first content
 .tab-content{
+    position: relative;
+    left: 70px;
     display: flex;
 }
 
 // ================
 .tab__carousel:nth-child(even){
     padding: 0 30px;
+
 }
 .carousel__card{
+    position: relative;
     box-shadow: 0px 100px 80px rgba(153, 165, 236, 0.05), 0px 64.8148px 46.8519px rgba(153, 165, 236, 0.037963), 0px 38.5185px 25.4815px rgba(153, 165, 236, 0.0303704), 0px 20px 13px rgba(153, 165, 236, 0.025), 0px 8.14815px 6.51852px rgba(153, 165, 236, 0.0196296), 0px 1.85185px 3.14815px rgba(153, 165, 236, 0.012037);
     border-radius: 25px;
     padding: 12px 12px 24px;
@@ -71,21 +98,31 @@
 }
 .card__img{
     width: 218px;
-    height: auto;
+    height: 145px;
 }
 .img-country{
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
     border-radius: 20px;
 }
 
 // ================
 .card__mark{
-
+    position: absolute;
+    top: 140px;
+    right: 21px;
 }
 .mark-place-btn{
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: $accent;
+    border: 2px solid #fff;
+    box-shadow: 0px 4.2069px 4.2069px rgba(255, 102, 71, 0.25);
 }
 
 // ================
@@ -122,4 +159,19 @@
     font-size: 0.9rem;
     font-weight: 500;
     line-height: 20px;
+}
+
+@media screen and (min-width: 480px) {
+    .tab{
+        width: calc(100% - 131px);
+        left: 131px;
+    }
+    .container{
+        margin: 0;
+    }
+}
+@media screen and (min-width: 768px){
+    .tab__tab-btn{
+        left: -30px;
+    }
 }
