@@ -869,7 +869,7 @@ body {
 }
 .tab {
   position: relative;
-  padding: 60px 0;
+  padding: 60px 0 80px;
   background: #fcfcfc;
   overflow-x: hidden;
 }
@@ -902,25 +902,18 @@ body {
   transform: rotate(-135deg);
 }
 
-.tab-content-wrapp {
-  position: relative;
-  display: flex;
-  align-items: center;
-  padding-top: 64px;
-}
-
 .tab__tab-btn {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   position: absolute;
-  left: -20px;
+  left: 0;
   writing-mode: vertical-lr;
   transform: rotate(-180deg);
   z-index: 1;
   background: #fcfcfc;
   background: linear-gradient(-90deg, rgb(252, 252, 252) 68%, rgba(255, 255, 255, 0) 100%);
-  height: calc(100% + 50px);
+  height: 80%;
   width: 70px;
 }
 
@@ -943,20 +936,12 @@ body {
   opacity: 1;
 }
 
-.tab__wave {
-  position: absolute;
-  right: -18px;
-  top: calc(50% - 65px);
-}
-
-.wave-svg {
-  transform: rotate(180deg);
-}
-
 .tab-content {
   position: relative;
   left: 70px;
-  display: flex;
+  width: 100%;
+  padding-top: 64px;
+  transition: all 300ms;
 }
 
 .tab__carousel:nth-child(even) {
@@ -965,6 +950,7 @@ body {
 
 .carousel__card {
   position: relative;
+  box-sizing: border-box;
   box-shadow: 0px 100px 80px rgba(153, 165, 236, 0.05), 0px 64.8148px 46.8519px rgba(153, 165, 236, 0.037963), 0px 38.5185px 25.4815px rgba(153, 165, 236, 0.0303704), 0px 20px 13px rgba(153, 165, 236, 0.025), 0px 8.14815px 6.51852px rgba(153, 165, 236, 0.0196296), 0px 1.85185px 3.14815px rgba(153, 165, 236, 0.012037);
   border-radius: 25px;
   padding: 12px 12px 24px;
@@ -1044,14 +1030,20 @@ body {
     width: calc(100% - 131px);
     left: 131px;
   }
+}
+@media screen and (min-width: 768px) {
+  .card__img {
+    width: 262px;
+    height: 170px;
+  }
 
   .container {
     margin: 0;
   }
 }
-@media screen and (min-width: 768px) {
-  .tab__tab-btn {
-    left: -30px;
+@media screen and (min-width: 1280px) {
+  .tab__carousel-head {
+    width: calc(100% - 270px);
   }
 }
 .aside-content {
