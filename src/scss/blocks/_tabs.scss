@@ -14,6 +14,12 @@
 }
 .carousel-wrapp{
     display: flex;
+    &:nth-child(1) {
+        padding-left: 20px;
+    }
+    &:nth-child(2){
+        padding-right: 20px;
+    }
 }
 .carousel-btn {
     display: block;
@@ -33,7 +39,7 @@
 // Tab buttons
 .tab__tab-btn{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     position: absolute;
     left: 0;
@@ -53,6 +59,7 @@
     font-weight: 500;
     cursor: pointer;
     transition: all 250ms;
+    margin: 39px 0;
     &:hover,
     &:focus {
         color: $accent;
@@ -63,14 +70,16 @@
     color: $accent;
     opacity: 1;
 }
-// .tab__wave{
-//     position: absolute;
-//     right: -18px;
-//     top: calc(50% - 65px);
-// }
-// .wave-svg{
-//     transform: rotate(180deg);
-// }
+.tab__wave{
+    position: absolute;
+    right: -2px;
+    top: calc(50% - 68px);
+    transition: all 300ms;
+}
+.wave-svg{
+    transform: rotate(180deg);
+    filter: drop-shadow(6px 1.2069px 3.2069px rgba(255, 102, 71, 0.25));
+}
 // The first content
 .tab-content{
     position: relative;
@@ -168,8 +177,8 @@
         width: 262px;
         height: 170px;
     }
-    .container{
-        margin: 0;
+    .card__mark{
+        top: 165px;
     }
 }
 @media screen and (min-width: 1280px){

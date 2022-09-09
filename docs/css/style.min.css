@@ -885,6 +885,12 @@ body {
 .carousel-wrapp {
   display: flex;
 }
+.carousel-wrapp:nth-child(1) {
+  padding-left: 20px;
+}
+.carousel-wrapp:nth-child(2) {
+  padding-right: 20px;
+}
 
 .carousel-btn {
   display: block;
@@ -904,7 +910,7 @@ body {
 
 .tab__tab-btn {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   position: absolute;
   left: 0;
@@ -925,6 +931,7 @@ body {
   font-weight: 500;
   cursor: pointer;
   transition: all 250ms;
+  margin: 39px 0;
 }
 .tab-btn-swich:hover, .tab-btn-swich:focus {
   color: #FF6647;
@@ -934,6 +941,18 @@ body {
 .tab-is-active {
   color: #FF6647;
   opacity: 1;
+}
+
+.tab__wave {
+  position: absolute;
+  right: -2px;
+  top: calc(50% - 68px);
+  transition: all 300ms;
+}
+
+.wave-svg {
+  transform: rotate(180deg);
+  filter: drop-shadow(6px 1.2069px 3.2069px rgba(255, 102, 71, 0.25));
 }
 
 .tab-content {
@@ -1037,8 +1056,8 @@ body {
     height: 170px;
   }
 
-  .container {
-    margin: 0;
+  .card__mark {
+    top: 165px;
   }
 }
 @media screen and (min-width: 1280px) {
