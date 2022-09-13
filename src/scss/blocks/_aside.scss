@@ -230,30 +230,6 @@
     font-size: 1.2rem;
     line-height: 31px;
 }
-.photo-btn-more{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 36px;
-    height: 36px;
-    border-radius: 10px;
-    background: #fff;
-    box-shadow: -4px 14px 24px rgba(0, 0, 0, 0.06);
-    &::before,
-    &::after,
-    & > .btn-more-dots{
-        width: 4px;
-        height: 4px;
-        content: '';
-        background: $accent-blue;
-        display: block;
-        border-radius: 50%;
-    }
-    &::before,
-    &::after{
-        margin: 0 2px;
-    }
-}
 .photo-list{
     padding-top: 14px;
     display: flex;

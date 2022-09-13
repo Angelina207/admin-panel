@@ -1,0 +1,37 @@
+.title{
+    color: #3E3C50;
+    line-height: 24px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    opacity: 0.7;
+    padding-left: 10px;
+}
+.btn-params{
+    width: 36px;
+    height: 36px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: -4px 14px 24px rgba(0, 0, 0, 0.06);
+    transition: all 250ms;
+    &::before,
+    &::after,
+    & > .btn-dot{
+        width: 4px;
+        height: 4px;
+        content: '';
+        background: $accent-blue;
+        display: block;
+        border-radius: 50%;
+    }
+    &::before,
+    &::after{
+        margin: 0 2px;
+    }
+    &:hover,
+    &:focus {
+        border: 1px $accent-blue solid;
+    }
+}
