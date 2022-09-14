@@ -25,11 +25,11 @@ export function carousel() {
             }   
 
             if (currentTab == '0') {
-                wave.style.top = '0%';
+                wave.style.top = '4%';
             } else if (currentTab == '1') {
                 wave.style.top = 'calc(50% - 68px)';
             } else if (currentTab == '2') {
-                wave.style.top = '66%';
+                wave.style.top = '65%';
             }
         } 
     }

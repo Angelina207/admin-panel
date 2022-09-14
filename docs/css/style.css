@@ -340,7 +340,6 @@ body {
   font-size: 1.2rem;
   font-weight: 500;
   opacity: 0.7;
-  padding-left: 10px;
 }
 
 .btn-params {
@@ -1364,6 +1363,12 @@ body {
     display: none;
   }
 }
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .sec__friend {
   padding: 0 0 76px;
 }
