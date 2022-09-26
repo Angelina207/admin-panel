@@ -119,7 +119,7 @@
     }
 }
 
-@media screen and(min-width: 480px) {
+@media screen and (min-width: 480px) {
     .filter-content{
         z-index: 1;
     }
@@ -147,7 +147,7 @@
     }
 }
 
-@media screen and(min-width: 580px) {
+@media screen and (min-width: 580px) {
     .filter-wrapp{
         display: flex;
     }
@@ -181,12 +181,12 @@
         margin: 0 20px 0 9px;
     }
 }
-@media screen and(min-width: 768px){
+@media screen and (min-width: 768px){
     .search-field{
         width: calc(326px - 60px);
     }
 }
-@media screen and(min-width: 1280px){
+@media screen and (min-width: 1280px){
     .filter-wrapp{
         position: relative;
         right: 406px;
