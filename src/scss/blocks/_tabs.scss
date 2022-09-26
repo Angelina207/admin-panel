@@ -1,0 +1,189 @@
+.tab{
+    position: relative;
+    padding: 60px 0 125px;
+    background: transparent;
+    overflow-x: hidden;
+}
+// Carousel buttons
+.tab__carousel-head{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+.carousel-wrapp{
+    display: flex;
+    &:nth-child(1) {
+        padding-left: 20px;
+    }
+    &:nth-child(2){
+        padding-right: 20px;
+    }
+}
+.carousel-btn {
+    display: block;
+    width: 13px;
+    height: 13px;
+    padding: 5px;
+    margin: 5px;
+    background: transparent;
+    border-top: 2px solid #000;
+    border-right: 2px solid #000;
+    transform: rotate(45deg);
+}
+.btn-left{
+    transform: rotate(-135deg);
+}
+
+// Tab buttons
+.tab__tab-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    writing-mode: vertical-lr;
+    transform: rotate(-180deg);
+    z-index: 1;
+    background: #FCFCFCFF;
+    background: linear-gradient(-90deg, rgba(252,252,252,1) 68%, rgba(255,255,255,0) 100%);
+    height: 80%; 
+    width: 70px;
+}
+.tab-btn-swich{
+    display: inline-block;
+    color: #353646;
+    opacity: 0.4;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 250ms;
+    margin: 39px 0;
+    &:hover,
+    &:focus {
+        color: $accent;
+        opacity: 1;
+    }
+}
+.tab-is-active{
+    color: $accent;
+    opacity: 1;
+}
+.tab__wave{
+    position: absolute;
+    right: -2px;
+    top: calc(50% - 68px);
+    transition: all 300ms;
+}
+.wave-svg{
+    transform: rotate(180deg);
+    filter: drop-shadow(6px 1.2069px 3.2069px rgba(255, 102, 71, 0.25));
+}
+// The first content
+.tab-content{
+    position: relative;
+    left: 70px;
+    width: 100%;
+    padding-top: 64px;
+    transition: all 300ms;
+}
+// ================
+.tab__carousel:nth-child(even){
+    padding: 0 30px;
+
+}
+.carousel__card{
+    position: relative;
+    box-sizing: border-box;
+    box-shadow: 0px 100px 80px rgba(153, 165, 236, 0.05), 0px 64.8148px 46.8519px rgba(153, 165, 236, 0.037963), 0px 38.5185px 25.4815px rgba(153, 165, 236, 0.0303704), 0px 20px 13px rgba(153, 165, 236, 0.025), 0px 8.14815px 6.51852px rgba(153, 165, 236, 0.0196296), 0px 1.85185px 3.14815px rgba(153, 165, 236, 0.012037);
+    border-radius: 25px;
+    padding: 12px 12px 24px;
+    background: #fff;
+}
+.card__img{
+    width: 218px;
+    height: 145px;
+}
+.img-country{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+// ================
+.card__mark{
+    position: absolute;
+    top: 140px;
+    right: 21px;
+}
+.mark-place-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: $accent;
+    border: 2px solid #fff;
+    box-shadow: 0px 4.2069px 4.2069px rgba(255, 102, 71, 0.25);
+}
+
+// ================
+.card__location{
+    padding-top: 10px;
+}
+.location-wrapp{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+.location-map{
+    display: flex;
+    align-items: center;
+}
+.location-title{
+    color: #353646;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 20px;
+}
+
+// ================
+.location-country{
+    color: #353646;
+    opacity: 0.4;
+    line-height: 20px;
+    font-weight: 400;
+    font-size: 0.9rem;
+    padding-left: 5px;
+}
+.location-cost{
+    color: $accent-green;
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+@media screen and (min-width: 480px) {
+    .tab{
+        width: calc(100% - 131px);
+        left: 131px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .card__img{
+        width: 262px;
+        height: 170px;
+    }
+    .card__mark{
+        top: 165px;
+    }
+}
+@media screen and (min-width: 1280px){
+    .tab__carousel-head{
+        width: calc(100% - 270px);
+    }
+
+}

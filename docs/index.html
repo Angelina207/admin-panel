@@ -129,9 +129,532 @@
 
     </div>
 </section>
-		
-		
-		
+		<section class="tab">
+        <!-- Carousel buttons -->
+        <div class="tab__carousel-head">
+            <div class="carousel-wrapp">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 20.5C16.6944 20.5 20.5 16.6944 20.5 12C20.5 7.30558 16.6944 3.5 12 3.5C7.30558 3.5 3.5 7.30558 3.5 12C3.5 16.6944 7.30558 20.5 12 20.5ZM22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" fill="#9BAAD3"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.9368 9.06319L10.8779 10.5853C10.7427 10.636 10.636 10.7427 10.5853 10.8779L9.06319 14.9368L13.1221 13.4147C13.2573 13.364 13.364 13.2573 13.4147 13.1221L14.9368 9.06319ZM15.4401 7.27246L10.3512 9.18079C9.81036 9.38361 9.38361 9.81035 9.18079 10.3512L7.27246 15.4401C6.97101 16.244 7.75603 17.029 8.55992 16.7275L13.6488 14.8192C14.1896 14.6164 14.6164 14.1896 14.8192 13.6488L16.7275 8.55992C17.029 7.75603 16.244 6.97101 15.4401 7.27246Z" fill="#9BAAD3"/>
+                </svg>
+                <p class="title">Explore</p>
+            </div>
+            <div class="carousel-wrapp">
+                <button class="carousel-btn btn-left"></button>
+                <button class="carousel-btn btn-right"></button>
+            </div>
+        </div>
+
+        <!-- Tab buttons -->
+        <div class="tab__tab-btn">
+            <div class="tab-btn-swich" data-tab="0">Europe</div>
+            <div class="tab-btn-swich tab-is-active" data-tab="1">Sights</div>
+            <div class="tab-btn-swich" data-tab="2">America</div>
+            
+            <div class="tab__wave">
+                <svg class="wave-svg" width="15" height="123" viewBox="0 0 15 123" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 5.66675C0 2.90532 -2.23858 0.666748 -5 0.666748C-7.76142 0.666748 -10 2.90532 -10 5.66674V35.2021C-10 43.2309 -15 50.9713 -15 59.0001C-15 67.0289 -10 74.7692 -10 82.798V117.333C-10 120.095 -7.76142 122.333 -5 122.333C-2.23858 122.333 0 120.095 0 117.333V97.563C0 84.5495 15 72.0135 15 59.0001C15 58.3591 14.9598 57.7275 14.8818 57.1077C13.3873 45.2353 0 34.2996 0 22.3334V5.66675Z" fill="#FF6647"/>
+                </svg>
+            </div>
+        </div>
+
+<!-- ===================================================
+    The first tab
+========================================================-->
+        <!-- The first content -->
+        <div class="tab-content" style="display: none;"> 
+            <div class="tab__carousel">
+                <div class="carousel__card">
+    
+                    <!-- Card imagine -->
+                    <div class="card__img">
+                        <img class="img-country" src="../img/cards/europe/img1.jpg" alt="Europe">
+                    </div>
+    
+                        <!-- Button to mark a resting place-->
+                    <div class="card__mark">
+                        <div class="mark-place-btn">
+                            <svg width="11" height="17" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.48338 0.643646H1.56277C0.791734 0.643646 0.160889 1.34537 0.160889 2.20304V15.8087C0.160889 16.1791 0.353647 16.5299 0.651546 16.6859C0.966968 16.8418 1.31744 16.8028 1.58029 16.5689L1.59781 16.5494L5.52307 12.8654L9.44833 16.5494L9.46585 16.5689C9.62356 16.7054 9.81632 16.7833 10.0091 16.7833C10.1317 16.7833 10.2719 16.7443 10.3946 16.6664C10.6925 16.5104 10.8853 16.1596 10.8853 15.7892V2.20304C10.8853 1.34537 10.2544 0.643646 9.48338 0.643646Z" fill="white"/>
+                            </svg>
+                        </div>
+                    </div>
+    
+                    <!-- Country & resting place -->
+                    <div class="card__location">
+                        <div>
+                            <p class="location-title">
+                                Europe
+                            </p>
+                        </div>
+    
+                        <!-- Cost -->
+                        <div class="location-wrapp">
+                            <div class="location-map">
+                                <svg width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.93098 0.0996094C3.02678 0.0996094 0.672363 2.51611 0.672363 5.4978C0.672363 7.90771 4.10927 12.3013 5.42606 13.8959C5.48782 13.9718 5.56505 14.0328 5.65229 14.0747C5.73954 14.1166 5.83467 14.1383 5.93098 14.1383C6.02729 14.1383 6.12243 14.1166 6.20967 14.0747C6.29692 14.0328 6.37415 13.9718 6.43591 13.8959C7.7527 12.3013 11.1896 7.90844 11.1896 5.4978C11.1896 2.51611 8.83519 0.0996094 5.93098 0.0996094ZM5.93098 7.11879C4.98665 7.11879 4.22179 6.33279 4.22179 5.36399C4.22179 4.39447 4.98737 3.6092 5.93098 3.6092C6.8746 3.6092 7.64018 4.39447 7.64018 5.36399C7.64018 6.33279 6.8746 7.11879 5.93098 7.11879Z" fill="#FF6647"/>
+                                </svg>                                    
+                                <p class="location-country">
+                                    Monaco
+                                </p>
+                            </div>
+                            <p class="location-cost">
+                                $3,940
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- The second content -->
+            <div class="tab__carousel">
+                <div class="carousel__card">
+    
+                    <!-- Card imagine -->
+                    <div class="card__img">
+                        <img class="img-country" src="../img/cards/europe/img2.jpg" alt="Europe">
+                    </div>
+    
+                        <!-- Button to mark a resting place-->
+                    <div class="card__mark">
+                        <div class="mark-place-btn">
+                            <svg width="11" height="17" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.48338 0.643646H1.56277C0.791734 0.643646 0.160889 1.34537 0.160889 2.20304V15.8087C0.160889 16.1791 0.353647 16.5299 0.651546 16.6859C0.966968 16.8418 1.31744 16.8028 1.58029 16.5689L1.59781 16.5494L5.52307 12.8654L9.44833 16.5494L9.46585 16.5689C9.62356 16.7054 9.81632 16.7833 10.0091 16.7833C10.1317 16.7833 10.2719 16.7443 10.3946 16.6664C10.6925 16.5104 10.8853 16.1596 10.8853 15.7892V2.20304C10.8853 1.34537 10.2544 0.643646 9.48338 0.643646Z" fill="white"/>
+                            </svg>
+                        </div>
+                    </div>
+    
+                    <!-- Country & resting place -->
+                    <div class="card__location">
+                        <div>
+                            <p class="location-title">
+                                Europe
+                            </p>
+                        </div>
+    
+                        <!-- Cost -->
+                        <div class="location-wrapp">
+                            <div class="location-map">
+                                <svg width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.93098 0.0996094C3.02678 0.0996094 0.672363 2.51611 0.672363 5.4978C0.672363 7.90771 4.10927 12.3013 5.42606 13.8959C5.48782 13.9718 5.56505 14.0328 5.65229 14.0747C5.73954 14.1166 5.83467 14.1383 5.93098 14.1383C6.02729 14.1383 6.12243 14.1166 6.20967 14.0747C6.29692 14.0328 6.37415 13.9718 6.43591 13.8959C7.7527 12.3013 11.1896 7.90844 11.1896 5.4978C11.1896 2.51611 8.83519 0.0996094 5.93098 0.0996094ZM5.93098 7.11879C4.98665 7.11879 4.22179 6.33279 4.22179 5.36399C4.22179 4.39447 4.98737 3.6092 5.93098 3.6092C6.8746 3.6092 7.64018 4.39447 7.64018 5.36399C7.64018 6.33279 6.8746 7.11879 5.93098 7.11879Z" fill="#FF6647"/>
+                                </svg>                                    
+                                <p class="location-country">
+                                    Prague
+                                </p>
+                            </div>
+                            <p class="location-cost">
+                                $1,120
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- The third content -->
+            <div class="tab__carousel">
+                <div class="carousel__card">
+    
+                    <!-- Card imagine -->
+                    <div class="card__img">
+                        <img class="img-country" src="../img/cards/europe/img3.jpg" alt="Europe">
+                    </div>
+    
+                        <!-- Button to mark a resting place-->
+                    <div class="card__mark">
+                        <div class="mark-place-btn">
+                            <svg width="11" height="17" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.48338 0.643646H1.56277C0.791734 0.643646 0.160889 1.34537 0.160889 2.20304V15.8087C0.160889 16.1791 0.353647 16.5299 0.651546 16.6859C0.966968 16.8418 1.31744 16.8028 1.58029 16.5689L1.59781 16.5494L5.52307 12.8654L9.44833 16.5494L9.46585 16.5689C9.62356 16.7054 9.81632 16.7833 10.0091 16.7833C10.1317 16.7833 10.2719 16.7443 10.3946 16.6664C10.6925 16.5104 10.8853 16.1596 10.8853 15.7892V2.20304C10.8853 1.34537 10.2544 0.643646 9.48338 0.643646Z" fill="white"/>
+                            </svg>
+                        </div>
+                    </div>
+    
+                    <!-- Country & resting place -->
+                    <div class="card__location">
+                        <div>
+                            <p class="location-title">
+                                Europe
+                            </p>
+                        </div>
+    
+                        <!-- Cost -->
+                        <div class="location-wrapp">
+                            <div class="location-map">
+                                <svg width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.93098 0.0996094C3.02678 0.0996094 0.672363 2.51611 0.672363 5.4978C0.672363 7.90771 4.10927 12.3013 5.42606 13.8959C5.48782 13.9718 5.56505 14.0328 5.65229 14.0747C5.73954 14.1166 5.83467 14.1383 5.93098 14.1383C6.02729 14.1383 6.12243 14.1166 6.20967 14.0747C6.29692 14.0328 6.37415 13.9718 6.43591 13.8959C7.7527 12.3013 11.1896 7.90844 11.1896 5.4978C11.1896 2.51611 8.83519 0.0996094 5.93098 0.0996094ZM5.93098 7.11879C4.98665 7.11879 4.22179 6.33279 4.22179 5.36399C4.22179 4.39447 4.98737 3.6092 5.93098 3.6092C6.8746 3.6092 7.64018 4.39447 7.64018 5.36399C7.64018 6.33279 6.8746 7.11879 5.93098 7.11879Z" fill="#FF6647"/>
+                                </svg>                                    
+                                <p class="location-country">
+                                    Italy
+                                </p>
+                            </div>
+                            <p class="location-cost">
+                                $1,750
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!-- ===================================================
+The second tab
+========================================================-->
+        <!-- The first content -->
+        <div class="tab-content" style="display: flex;"> 
+            <div class="tab__carousel">
+                <div class="carousel__card">
+    
+                    <!-- Card imagine -->
+                    <div class="card__img">
+                        <img class="img-country" src="../img/cards/sights/img1.png" alt="Island">
+                    </div>
+    
+                        <!-- Button to mark a resting place-->
+                    <div class="card__mark">
+                        <div class="mark-place-btn">
+                            <svg width="11" height="17" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.48338 0.643646H1.56277C0.791734 0.643646 0.160889 1.34537 0.160889 2.20304V15.8087C0.160889 16.1791 0.353647 16.5299 0.651546 16.6859C0.966968 16.8418 1.31744 16.8028 1.58029 16.5689L1.59781 16.5494L5.52307 12.8654L9.44833 16.5494L9.46585 16.5689C9.62356 16.7054 9.81632 16.7833 10.0091 16.7833C10.1317 16.7833 10.2719 16.7443 10.3946 16.6664C10.6925 16.5104 10.8853 16.1596 10.8853 15.7892V2.20304C10.8853 1.34537 10.2544 0.643646 9.48338 0.643646Z" fill="white"/>
+                            </svg>
+                        </div>
+                    </div>
+    
+                    <!-- Country & resting place -->
+                    <div class="card__location">
+                        <div>
+                            <p class="location-title">
+                                Phi Phi Islands
+                            </p>
+                        </div>
+    
+                        <!-- Cost -->
+                        <div class="location-wrapp">
+                            <div class="location-map">
+                                <svg width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.93098 0.0996094C3.02678 0.0996094 0.672363 2.51611 0.672363 5.4978C0.672363 7.90771 4.10927 12.3013 5.42606 13.8959C5.48782 13.9718 5.56505 14.0328 5.65229 14.0747C5.73954 14.1166 5.83467 14.1383 5.93098 14.1383C6.02729 14.1383 6.12243 14.1166 6.20967 14.0747C6.29692 14.0328 6.37415 13.9718 6.43591 13.8959C7.7527 12.3013 11.1896 7.90844 11.1896 5.4978C11.1896 2.51611 8.83519 0.0996094 5.93098 0.0996094ZM5.93098 7.11879C4.98665 7.11879 4.22179 6.33279 4.22179 5.36399C4.22179 4.39447 4.98737 3.6092 5.93098 3.6092C6.8746 3.6092 7.64018 4.39447 7.64018 5.36399C7.64018 6.33279 6.8746 7.11879 5.93098 7.11879Z" fill="#FF6647"/>
+                                </svg>                                    
+                                <p class="location-country">
+                                    Thailand
+                                </p>
+                            </div>
+                            <p class="location-cost">
+                                $1,480
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- The second content -->
+            <div class="tab__carousel">
+                <div class="carousel__card">
+    
+                    <!-- Card imagine -->
+                    <div class="card__img">
+                        <img class="img-country" src="../img/cards/sights/img2.png" alt="Island">
+                    </div>
+    
+                        <!-- Button to mark a resting place-->
+                    <div class="card__mark">
+                        <div class="mark-place-btn">
+                            <svg width="11" height="17" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.48338 0.643646H1.56277C0.791734 0.643646 0.160889 1.34537 0.160889 2.20304V15.8087C0.160889 16.1791 0.353647 16.5299 0.651546 16.6859C0.966968 16.8418 1.31744 16.8028 1.58029 16.5689L1.59781 16.5494L5.52307 12.8654L9.44833 16.5494L9.46585 16.5689C9.62356 16.7054 9.81632 16.7833 10.0091 16.7833C10.1317 16.7833 10.2719 16.7443 10.3946 16.6664C10.6925 16.5104 10.8853 16.1596 10.8853 15.7892V2.20304C10.8853 1.34537 10.2544 0.643646 9.48338 0.643646Z" fill="white"/>
+                            </svg>
+                        </div>
+                    </div>
+    
+                    <!-- Country & resting place -->
+                    <div class="card__location">
+                        <div>
+                            <p class="location-title">
+                                Phi Phi Islands
+                            </p>
+                        </div>
+    
+                        <!-- Cost -->
+                        <div class="location-wrapp">
+                            <div class="location-map">
+                                <svg width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.93098 0.0996094C3.02678 0.0996094 0.672363 2.51611 0.672363 5.4978C0.672363 7.90771 4.10927 12.3013 5.42606 13.8959C5.48782 13.9718 5.56505 14.0328 5.65229 14.0747C5.73954 14.1166 5.83467 14.1383 5.93098 14.1383C6.02729 14.1383 6.12243 14.1166 6.20967 14.0747C6.29692 14.0328 6.37415 13.9718 6.43591 13.8959C7.7527 12.3013 11.1896 7.90844 11.1896 5.4978C11.1896 2.51611 8.83519 0.0996094 5.93098 0.0996094ZM5.93098 7.11879C4.98665 7.11879 4.22179 6.33279 4.22179 5.36399C4.22179 4.39447 4.98737 3.6092 5.93098 3.6092C6.8746 3.6092 7.64018 4.39447 7.64018 5.36399C7.64018 6.33279 6.8746 7.11879 5.93098 7.11879Z" fill="#FF6647"/>
+                                </svg>                                    
+                                <p class="location-country">
+                                    Thailand
+                                </p>
+                            </div>
+                            <p class="location-cost">
+                                $1,480
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- The third content -->
+            <div class="tab__carousel">
+                <div class="carousel__card">
+    
+                    <!-- Card imagine -->
+                    <div class="card__img">
+                        <img class="img-country" src="../img/cards/sights/img3.png" alt="Island">
+                    </div>
+    
+                        <!-- Button to mark a resting place-->
+                    <div class="card__mark">
+                        <div class="mark-place-btn">
+                            <svg width="11" height="17" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.48338 0.643646H1.56277C0.791734 0.643646 0.160889 1.34537 0.160889 2.20304V15.8087C0.160889 16.1791 0.353647 16.5299 0.651546 16.6859C0.966968 16.8418 1.31744 16.8028 1.58029 16.5689L1.59781 16.5494L5.52307 12.8654L9.44833 16.5494L9.46585 16.5689C9.62356 16.7054 9.81632 16.7833 10.0091 16.7833C10.1317 16.7833 10.2719 16.7443 10.3946 16.6664C10.6925 16.5104 10.8853 16.1596 10.8853 15.7892V2.20304C10.8853 1.34537 10.2544 0.643646 9.48338 0.643646Z" fill="white"/>
+                            </svg>
+                        </div>
+                    </div>
+    
+                    <!-- Country & resting place -->
+                    <div class="card__location">
+                        <div>
+                            <p class="location-title">
+                                Phi Phi Islands
+                            </p>
+                        </div>
+    
+                        <!-- Cost -->
+                        <div class="location-wrapp">
+                            <div class="location-map">
+                                <svg width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.93098 0.0996094C3.02678 0.0996094 0.672363 2.51611 0.672363 5.4978C0.672363 7.90771 4.10927 12.3013 5.42606 13.8959C5.48782 13.9718 5.56505 14.0328 5.65229 14.0747C5.73954 14.1166 5.83467 14.1383 5.93098 14.1383C6.02729 14.1383 6.12243 14.1166 6.20967 14.0747C6.29692 14.0328 6.37415 13.9718 6.43591 13.8959C7.7527 12.3013 11.1896 7.90844 11.1896 5.4978C11.1896 2.51611 8.83519 0.0996094 5.93098 0.0996094ZM5.93098 7.11879C4.98665 7.11879 4.22179 6.33279 4.22179 5.36399C4.22179 4.39447 4.98737 3.6092 5.93098 3.6092C6.8746 3.6092 7.64018 4.39447 7.64018 5.36399C7.64018 6.33279 6.8746 7.11879 5.93098 7.11879Z" fill="#FF6647"/>
+                                </svg>                                    
+                                <p class="location-country">
+                                    Thailand
+                                </p>
+                            </div>
+                            <p class="location-cost">
+                                $1,480
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!-- ===================================================
+    The third tab
+========================================================-->
+        <!-- The first content -->
+        <div class="tab-content" style="display: none;"> 
+            <div class="tab__carousel">
+                <div class="carousel__card">
+    
+                    <!-- Card imagine -->
+                    <div class="card__img">
+                        <img class="img-country" src="../img/cards/usa/img1.jpg" alt="Yellowstone Park">
+                    </div>
+    
+                        <!-- Button to mark a resting place-->
+                    <div class="card__mark">
+                        <div class="mark-place-btn">
+                            <svg width="11" height="17" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.48338 0.643646H1.56277C0.791734 0.643646 0.160889 1.34537 0.160889 2.20304V15.8087C0.160889 16.1791 0.353647 16.5299 0.651546 16.6859C0.966968 16.8418 1.31744 16.8028 1.58029 16.5689L1.59781 16.5494L5.52307 12.8654L9.44833 16.5494L9.46585 16.5689C9.62356 16.7054 9.81632 16.7833 10.0091 16.7833C10.1317 16.7833 10.2719 16.7443 10.3946 16.6664C10.6925 16.5104 10.8853 16.1596 10.8853 15.7892V2.20304C10.8853 1.34537 10.2544 0.643646 9.48338 0.643646Z" fill="white"/>
+                            </svg>
+                        </div>
+                    </div>
+    
+                    <!-- Country & resting place -->
+                    <div class="card__location">
+                        <div>
+                            <p class="location-title">
+                                USA, Wyoming
+                            </p>
+                        </div>
+    
+                        <!-- Cost -->
+                        <div class="location-wrapp">
+                            <div class="location-map">
+                                <svg width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.93098 0.0996094C3.02678 0.0996094 0.672363 2.51611 0.672363 5.4978C0.672363 7.90771 4.10927 12.3013 5.42606 13.8959C5.48782 13.9718 5.56505 14.0328 5.65229 14.0747C5.73954 14.1166 5.83467 14.1383 5.93098 14.1383C6.02729 14.1383 6.12243 14.1166 6.20967 14.0747C6.29692 14.0328 6.37415 13.9718 6.43591 13.8959C7.7527 12.3013 11.1896 7.90844 11.1896 5.4978C11.1896 2.51611 8.83519 0.0996094 5.93098 0.0996094ZM5.93098 7.11879C4.98665 7.11879 4.22179 6.33279 4.22179 5.36399C4.22179 4.39447 4.98737 3.6092 5.93098 3.6092C6.8746 3.6092 7.64018 4.39447 7.64018 5.36399C7.64018 6.33279 6.8746 7.11879 5.93098 7.11879Z" fill="#FF6647"/>
+                                </svg>                                    
+                                <p class="location-country">
+                                    Yellowstone Park
+                                </p>
+                            </div>
+                            <p class="location-cost">
+                                $4,380
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- The second content -->
+            <div class="tab__carousel">
+                <div class="carousel__card">
+    
+                    <!-- Card imagine -->
+                    <div class="card__img">
+                        <img class="img-country" src="../img/cards/usa/img2.webp" alt="Grand Canyon">
+                    </div>
+    
+                        <!-- Button to mark a resting place-->
+                    <div class="card__mark">
+                        <div class="mark-place-btn">
+                            <svg width="11" height="17" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.48338 0.643646H1.56277C0.791734 0.643646 0.160889 1.34537 0.160889 2.20304V15.8087C0.160889 16.1791 0.353647 16.5299 0.651546 16.6859C0.966968 16.8418 1.31744 16.8028 1.58029 16.5689L1.59781 16.5494L5.52307 12.8654L9.44833 16.5494L9.46585 16.5689C9.62356 16.7054 9.81632 16.7833 10.0091 16.7833C10.1317 16.7833 10.2719 16.7443 10.3946 16.6664C10.6925 16.5104 10.8853 16.1596 10.8853 15.7892V2.20304C10.8853 1.34537 10.2544 0.643646 9.48338 0.643646Z" fill="white"/>
+                            </svg>
+                        </div>
+                    </div>
+    
+                    <!-- Country & resting place -->
+                    <div class="card__location">
+                        <div>
+                            <p class="location-title">
+                                USA, Arizona
+                            </p>
+                        </div>
+    
+                        <!-- Cost -->
+                        <div class="location-wrapp">
+                            <div class="location-map">
+                                <svg width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.93098 0.0996094C3.02678 0.0996094 0.672363 2.51611 0.672363 5.4978C0.672363 7.90771 4.10927 12.3013 5.42606 13.8959C5.48782 13.9718 5.56505 14.0328 5.65229 14.0747C5.73954 14.1166 5.83467 14.1383 5.93098 14.1383C6.02729 14.1383 6.12243 14.1166 6.20967 14.0747C6.29692 14.0328 6.37415 13.9718 6.43591 13.8959C7.7527 12.3013 11.1896 7.90844 11.1896 5.4978C11.1896 2.51611 8.83519 0.0996094 5.93098 0.0996094ZM5.93098 7.11879C4.98665 7.11879 4.22179 6.33279 4.22179 5.36399C4.22179 4.39447 4.98737 3.6092 5.93098 3.6092C6.8746 3.6092 7.64018 4.39447 7.64018 5.36399C7.64018 6.33279 6.8746 7.11879 5.93098 7.11879Z" fill="#FF6647"/>
+                                </svg>                                    
+                                <p class="location-country">
+                                    Grand Canyon
+                                </p>
+                            </div>
+                            <p class="location-cost">
+                                $4,580
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- The third content -->
+            <div class="tab__carousel">
+                <div class="carousel__card">
+    
+                    <!-- Card imagine -->
+                    <div class="card__img">
+                        <img class="img-country" src="../img/cards/usa/img3.jpg" alt="Monument Valley">
+                    </div>
+    
+                        <!-- Button to mark a resting place-->
+                    <div class="card__mark">
+                        <div class="mark-place-btn">
+                            <svg width="11" height="17" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.48338 0.643646H1.56277C0.791734 0.643646 0.160889 1.34537 0.160889 2.20304V15.8087C0.160889 16.1791 0.353647 16.5299 0.651546 16.6859C0.966968 16.8418 1.31744 16.8028 1.58029 16.5689L1.59781 16.5494L5.52307 12.8654L9.44833 16.5494L9.46585 16.5689C9.62356 16.7054 9.81632 16.7833 10.0091 16.7833C10.1317 16.7833 10.2719 16.7443 10.3946 16.6664C10.6925 16.5104 10.8853 16.1596 10.8853 15.7892V2.20304C10.8853 1.34537 10.2544 0.643646 9.48338 0.643646Z" fill="white"/>
+                            </svg>
+                        </div>
+                    </div>
+    
+                    <!-- Country & resting place -->
+                    <div class="card__location">
+                        <div>
+                            <p class="location-title">
+                                USA, Arizona
+                            </p>
+                        </div>
+    
+                        <!-- Cost -->
+                        <div class="location-wrapp">
+                            <div class="location-map">
+                                <svg width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.93098 0.0996094C3.02678 0.0996094 0.672363 2.51611 0.672363 5.4978C0.672363 7.90771 4.10927 12.3013 5.42606 13.8959C5.48782 13.9718 5.56505 14.0328 5.65229 14.0747C5.73954 14.1166 5.83467 14.1383 5.93098 14.1383C6.02729 14.1383 6.12243 14.1166 6.20967 14.0747C6.29692 14.0328 6.37415 13.9718 6.43591 13.8959C7.7527 12.3013 11.1896 7.90844 11.1896 5.4978C11.1896 2.51611 8.83519 0.0996094 5.93098 0.0996094ZM5.93098 7.11879C4.98665 7.11879 4.22179 6.33279 4.22179 5.36399C4.22179 4.39447 4.98737 3.6092 5.93098 3.6092C6.8746 3.6092 7.64018 4.39447 7.64018 5.36399C7.64018 6.33279 6.8746 7.11879 5.93098 7.11879Z" fill="#FF6647"/>
+                                </svg>                                    
+                                <p class="location-country">
+                                    Monument Valley
+                                </p>
+                            </div>
+                            <p class="location-cost">
+                                $3,620
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+		<div class="content-wrapp">
+			<section class="sec__friend">
+    <div class="container">
+        <div class="friend-header">
+            <div class="friend-title">
+                <p class="title">Invite Friends</p>
+            </div>
+
+            <div class="friend__btn-params">
+                <button class="btn-params">
+                    <div class="btn-dot"></div>
+                </button>
+            </div>
+        </div>
+
+        <div class="friend-card-list">
+            <div class="friend-card">
+                <div class="friend-img-wrapp">
+                    <img class="friend-img" src="../img/friends/img1.png" alt="face">
+                </div>
+                <p class="friend-name">Nate</p>
+                <button class="friend-btn friend-btn-remove"></button>
+            </div>
+
+            <div class="friend-card">
+                <div class="friend-img-wrapp">
+                    <img class="friend-img" src="../img/friends/img2.png" alt="face">
+                </div>
+                <p class="friend-name">Jim</p>
+                <button class="friend-btn friend-btn-remove"></button>
+            </div>
+
+            <div class="friend-card">
+                <div class="friend-img-wrapp">
+                    <img class="friend-img" src="../img/friends/img3.png" alt="face">
+                </div>
+                <p class="friend-name">Angela</p>
+                <button class="friend-btn friend-btn-mark"></button>
+            </div>
+
+            <div class="friend-card">
+                <div class="friend-img-wrapp">
+                    <img class="friend-img" src="../img/friends/img4.png" alt="face">
+                </div>
+                <p class="friend-name">Bhaaji</p>
+                <button class="friend-btn friend-btn-add"></button>
+            </div>
+
+            <div class="friend-card">
+                <div class="friend-img-wrapp">
+                    <img class="friend-img" src="../img/friends/img5.png" alt="face">
+                </div>
+                <p class="friend-name">Billo</p>
+                <button class="friend-btn friend-btn-add"></button>
+            </div>
+
+            <div class="friend-card">
+                <div class="friend-img-wrapp">
+                    <img class="friend-img" src="../img/friends/img6.png" alt="face">
+                </div>
+                <p class="friend-name">Alex</p>
+                <button class="friend-btn friend-btn-add"></button>
+            </div>
+        </div>
+    </div>
+</section>
+			<section class="chart">
+    <div class="container">
+        <div class="chart-header">
+            <!-- <div class="chart-title">
+                <p class="title">Members</p>
+            </div>
+
+            <div class="chart__btn-params">
+                <button class="btn-params">
+                    <div class="btn-dot"></div>
+                </button>
+            </div> -->
+
+            <div>
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
+    </div>
+</section>
+		</div>
 	</main>
 	<aside class="aside">
     <div class="aside-content">
@@ -239,8 +762,8 @@
         <div class="aside__photo">
             <div class="photo-head">
                 <p class="photo-title">Photos</p>
-                <button class="photo-btn-more">
-                    <div class="btn-more-dots"></div>
+                <button class="btn-params">
+                    <div class="btn-dot"></div>
                 </button>
             </div>
 
@@ -267,6 +790,7 @@
         </div>
     </div>
 </aside>
+
 		<script src="js/app.min.js"></script>
 </body>
 </html>
