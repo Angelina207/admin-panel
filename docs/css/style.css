@@ -1340,6 +1340,13 @@ body {
   width: 600px;
 }
 
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
 .sec__friend {
   padding: 0 0 76px;
 }

@@ -7,7 +7,18 @@ export function chartLib() {
       type: 'bar',
       data: {
           labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
-          datasets: [{
+          datasets: [
+            {
+              label: 'Registered',
+              data: [23, 18, 19, 12, 20, 28, 22],
+              backgroundColor: [
+                  '#F96549',
+              ],  
+              border: 0,
+              borderRadius: 75,
+              barThickness: 15,
+            },
+            {
               label: 'Guests',
               data: [42, 29, 31, 24, 39, 37, 29],
               backgroundColor: [
@@ -16,28 +27,17 @@ export function chartLib() {
               border: 0,
               borderRadius: 75,
               barThickness: 15,
-              maxBarThickness: 40,
-              order: 1,
           },
-          {
-            label: 'Registered',
-            data: [23, 18, 19, 12, 20, 28, 22],
-            backgroundColor: [
-                '#F96549',
-            ],  
-            border: 0,
-            borderRadius: 75,
-            barThickness: 15,
-            maxBarThickness: 40,
-            order: 1,
-          }
         ]
       },
       options: {
           scales: {
+            x: {
+              stacked: true,
+            },
               y: {
                 beginAtZero: true,
-                stack: true,
+                stacked: true,
                 }
           }
       }
