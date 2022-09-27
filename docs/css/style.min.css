@@ -1117,7 +1117,7 @@ body {
   width: 100%;
   height: auto;
   border-radius: 15px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .apart-btn {
@@ -1303,12 +1303,15 @@ body {
 
 .photo-list-item {
   cursor: pointer;
+  width: 111px;
+  height: 111px;
 }
 
 .photo-list-img {
   border-radius: 10px;
-  width: 111px;
-  height: 111px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 @media screen and (min-width: 480px) {
