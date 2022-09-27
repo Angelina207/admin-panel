@@ -1,12 +1,15 @@
 .chart{
     position: relative;
-    left: 131px;
-    min-width: 393px;
-    width: 600px;
+    top: 76px;
+    width: 100%;
 }
 .chart-header{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-bottom: 30px;
+}
+.chart-body{
+    min-width: 283px;
+    height: auto;
 }

@@ -1,9 +1,23 @@
+// Overlay
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    min-width: 320px;
+    background: #000;
+    z-index: 5;
+    opacity: 0.4;
+    display: none;
+}
 .title{
     color: #3E3C50;
     line-height: 24px;
     font-size: 1.2rem;
     font-weight: 500;
     opacity: 0.7;
+    padding-left: 10px;
 }
 .btn-params{
     width: 36px;
@@ -34,9 +48,10 @@
         border: 1px $accent-blue solid;
     }
 }
-
+.content-wrapp{
+    display: flex;
+    flex-direction: column;
+}
 @media screen and (min-width: 1024px) {
-    .content-wrapp{
-        display: flex;
-    }
+
 }

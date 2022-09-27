@@ -321,12 +321,26 @@ body {
   font-weight: 100;
   font-display: swap;
 }
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  min-width: 320px;
+  background: #000;
+  z-index: 5;
+  opacity: 0.4;
+  display: none;
+}
+
 .title {
   color: #3E3C50;
   line-height: 24px;
   font-size: 1.2rem;
   font-weight: 500;
   opacity: 0.7;
+  padding-left: 10px;
 }
 
 .btn-params {
@@ -355,17 +369,19 @@ body {
   border: 1px #3246D3 solid;
 }
 
-@media screen and (min-width: 1024px) {
-  .content-wrapp {
-    display: flex;
-  }
+.content-wrapp {
+  display: flex;
+  flex-direction: column;
 }
+
 .header {
-  position: relative;
-  min-width: 100vw;
+  position: fixed;
+  min-width: 100%;
+  height: auto;
   background: #393D46;
   font-family: "Google Sans";
-  padding: 40px 0;
+  padding: 20px 0;
+  z-index: 5;
 }
 
 .header__btn {
@@ -425,7 +441,7 @@ body {
   left: 0;
   width: 100vw;
   min-width: 320px;
-  height: auto;
+  height: 100vh;
   background: rgb(244, 245, 250);
   background: linear-gradient(90deg, rgb(244, 245, 250) 48%, rgb(234, 236, 241) 100%, rgb(216, 218, 225) 100%, rgb(214, 216, 223) 100%);
   padding: 80px 20px 20px 20px;
@@ -464,6 +480,10 @@ body {
 .btn-close:focus.btn-close::after,
 .btn-close:hover.btn-close::after {
   background: #1C295D;
+}
+
+.header__nav ~ .is-open-nav {
+  position: fixed;
 }
 
 .is-open-nav {
@@ -614,7 +634,7 @@ body {
     top: 113px;
     width: 131px;
     min-width: auto;
-    height: auto;
+    height: 100%;
     padding: 56px 26px 34px;
     overflow: hidden;
     z-index: 0;
@@ -680,8 +700,9 @@ body {
   transition: all 300ms;
 }
 .filter-content.is-open {
+  position: fixed;
   top: 0;
-  z-index: 3;
+  z-index: 6;
 }
 
 .user-name {
@@ -737,30 +758,19 @@ body {
   box-shadow: 0px 4.2069px 4.2069px rgba(255, 102, 71, 0.25);
 }
 
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  min-width: 320px;
-  background: #000;
-  z-index: 2;
-  opacity: 0.4;
-  display: none;
-}
-
 .arrow {
   cursor: pointer;
   position: absolute;
-  top: 130px;
+  top: 90px;
   left: 50%;
   transition: top 500ms;
-  z-index: 3;
+  z-index: 2;
 }
 
 .filter-content.is-open ~ .arrow {
+  position: fixed;
   top: 290px;
+  z-index: 6;
 }
 
 .arrow span {
@@ -867,6 +877,7 @@ body {
 }
 .tab {
   position: relative;
+  top: 76px;
   padding: 60px 0 125px;
   background: transparent;
   overflow-x: hidden;
@@ -1071,7 +1082,7 @@ body {
   left: 0;
   background: rgb(251, 250, 249);
   background: linear-gradient(31deg, rgb(251, 250, 249) 25%, rgb(238, 248, 246) 100%);
-  z-index: 3;
+  z-index: 6;
   padding: 60px 20px 20px;
   transition: all 500ms;
 }
@@ -1338,9 +1349,8 @@ body {
 }
 .chart {
   position: relative;
-  left: 131px;
-  min-width: 393px;
-  width: 600px;
+  top: 76px;
+  width: 100%;
 }
 
 .chart-header {
@@ -1350,7 +1360,14 @@ body {
   padding-bottom: 30px;
 }
 
+.chart-body {
+  min-width: 283px;
+  height: auto;
+}
+
 .sec__friend {
+  position: relative;
+  top: 76px;
   padding: 0 0 76px;
 }
 
