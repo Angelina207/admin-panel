@@ -450,7 +450,7 @@ body {
   flex-direction: column;
   box-sizing: border-box;
   position: absolute;
-  top: -1000%;
+  top: -2000%;
   left: 0;
   width: 100vw;
   min-width: 320px;
@@ -643,7 +643,7 @@ body {
 .filter-content {
   box-sizing: border-box;
   position: absolute;
-  top: -150%;
+  top: -2000%;
   left: 0;
   width: 100vw;
   min-width: 320px;
