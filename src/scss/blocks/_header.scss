@@ -172,62 +172,6 @@
     opacity: 0.4;
 }
 
-// Button 'Power'
-.nav__btn{
-    display: flex;
-    align-items: center;
-    margin-top: 140px;
-}
-.btn-power{
-    position: relative;
-    width: 50px;
-    height: 50px;
-    border-radius: 10px;
-    background: #fff;
-    margin-right: 10px;
-    transition: all 250ms;
-    overflow: hidden;
-    &::after{
-        position: absolute;
-        top: -15px;
-        right: -13px;
-        content: '';
-        background: #fff;
-        width: 35px;
-        height: 35px;
-        border-radius: 50%;
-        opacity: 0;
-        transition: all 250ms;
-    }
-    &:hover,
-    &:focus {
-    background: $accent;
-    box-shadow: $shadow-nav;
-    }
-}
-.btn-power:hover.btn-power::after,
-.btn-power:focus.btn-power::after {
-    opacity: 0.4;
-}
-.btn-power-icon{
-    fill: #9BAAD3;
-    transition: all 250ms;
-}
-.btn-power:hover > .btn-power-icon,
-.btn-power:focus > .btn-power-icon {
-    fill: #fff;
-}
-.btn-power-logout{
-    color: $nav;
-    font-weight: 400;
-    font-size: 0.8rem;
-    transition: all 250ms;
-}
-.btn-power:hover + .btn-power-logout,
-.btn-power:focus + .btn-power-logout {
-    color: $nav-accent;
-}
-
 @media screen and (min-width: 480px) {
     .header{
         position: relative;
@@ -235,8 +179,6 @@
         width: 131px;
         height: 113px;
         min-width: auto;
-        background: $bc-header;
-        font-family: 'Google Sans';
     }
     .btn__burger{
         position: absolute;
@@ -250,10 +192,9 @@
         top: 113px;
         width: 131px;
         min-width: auto;
-        height: 100%;
-        padding: 56px 26px 34px;
+        height: auto;
+        padding: 26px 26px 550%;
         overflow: hidden;
-        z-index: 0;
     }
     .btn-close{
         display: none;
@@ -262,6 +203,9 @@
         flex-direction: column;
         &:nth-child(even) {
             margin: 30px 0;
+        }
+        & ~ .nav-link--margin{
+            margin-top: 181px;
         }
     }
     .nav-link-icon{

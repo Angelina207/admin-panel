@@ -2,7 +2,6 @@
     position: relative;
     top: 76px;
     padding: 60px 0 125px;
-    background: transparent;
     overflow-x: hidden;
 }
 // Carousel buttons
@@ -174,6 +173,9 @@
     }
 }
 @media screen and (min-width: 768px) {
+    .tab{
+        top: 0;
+    }
     .card__img{
         width: 262px;
         height: 170px;
@@ -186,5 +188,4 @@
     .tab__carousel-head{
         width: calc(100% - 270px);
     }
-
 }

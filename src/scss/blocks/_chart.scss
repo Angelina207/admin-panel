@@ -1,15 +1,23 @@
 .chart{
     position: relative;
     top: 76px;
-    width: 100%;
-}
-.chart-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 30px;
+    padding-bottom: 60px;
 }
 .chart-body{
     min-width: 283px;
+    max-width: 530px;
     height: auto;
+}
+
+@media screen and (min-width: 480px) {
+    .chart{
+        width: calc(100% - 131px);
+        left: 131px;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .chart{
+        top: 0;
+        padding: 0;
+    }
 }

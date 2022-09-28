@@ -334,6 +334,12 @@ body {
   display: none;
 }
 
+.title-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .title {
   color: #3E3C50;
   line-height: 24px;
@@ -370,10 +376,17 @@ body {
 }
 
 .content-wrapp {
+  position: relative;
   display: flex;
   flex-direction: column;
 }
 
+@media screen and (min-width: 1024px) {
+  .content-wrapp {
+    flex-direction: row;
+    padding-bottom: 30px;
+  }
+}
 .header {
   position: fixed;
   min-width: 100%;
@@ -552,66 +565,6 @@ body {
   opacity: 0.4;
 }
 
-.nav__btn {
-  display: flex;
-  align-items: center;
-  margin-top: 140px;
-}
-
-.btn-power {
-  position: relative;
-  width: 50px;
-  height: 50px;
-  border-radius: 10px;
-  background: #fff;
-  margin-right: 10px;
-  transition: all 250ms;
-  overflow: hidden;
-}
-.btn-power::after {
-  position: absolute;
-  top: -15px;
-  right: -13px;
-  content: "";
-  background: #fff;
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  opacity: 0;
-  transition: all 250ms;
-}
-.btn-power:hover, .btn-power:focus {
-  background: #FF6647;
-  box-shadow: 0px 10px 20px rgba(88, 92, 229, 0.25);
-}
-
-.btn-power:hover.btn-power::after,
-.btn-power:focus.btn-power::after {
-  opacity: 0.4;
-}
-
-.btn-power-icon {
-  fill: #9BAAD3;
-  transition: all 250ms;
-}
-
-.btn-power:hover > .btn-power-icon,
-.btn-power:focus > .btn-power-icon {
-  fill: #fff;
-}
-
-.btn-power-logout {
-  color: #7987A5;
-  font-weight: 400;
-  font-size: 0.8rem;
-  transition: all 250ms;
-}
-
-.btn-power:hover + .btn-power-logout,
-.btn-power:focus + .btn-power-logout {
-  color: #1C295D;
-}
-
 @media screen and (min-width: 480px) {
   .header {
     position: relative;
@@ -619,8 +572,6 @@ body {
     width: 131px;
     height: 113px;
     min-width: auto;
-    background: #393D46;
-    font-family: "Google Sans";
   }
   .btn__burger {
     position: absolute;
@@ -634,10 +585,9 @@ body {
     top: 113px;
     width: 131px;
     min-width: auto;
-    height: 100%;
-    padding: 56px 26px 34px;
+    height: auto;
+    padding: 26px 26px 550%;
     overflow: hidden;
-    z-index: 0;
   }
   .btn-close {
     display: none;
@@ -647,6 +597,9 @@ body {
   }
   .nav-link:nth-child(even) {
     margin: 30px 0;
+  }
+  .nav-link ~ .nav-link--margin {
+    margin-top: 181px;
   }
   .nav-link-icon {
     position: relative;
@@ -690,7 +643,7 @@ body {
 .filter-content {
   box-sizing: border-box;
   position: absolute;
-  top: -100%;
+  top: -150%;
   left: 0;
   width: 100vw;
   min-width: 320px;
@@ -879,7 +832,6 @@ body {
   position: relative;
   top: 76px;
   padding: 60px 0 125px;
-  background: transparent;
   overflow-x: hidden;
 }
 
@@ -1060,6 +1012,9 @@ body {
   }
 }
 @media screen and (min-width: 768px) {
+  .tab {
+    top: 0;
+  }
   .card__img {
     width: 262px;
     height: 170px;
@@ -1083,7 +1038,7 @@ body {
   background: rgb(251, 250, 249);
   background: linear-gradient(31deg, rgb(251, 250, 249) 25%, rgb(238, 248, 246) 100%);
   z-index: 6;
-  padding: 60px 20px 20px;
+  padding: 60px 20px;
   transition: all 500ms;
 }
 
@@ -1350,31 +1305,31 @@ body {
 .chart {
   position: relative;
   top: 76px;
-  width: 100%;
-}
-
-.chart-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 30px;
+  padding-bottom: 60px;
 }
 
 .chart-body {
   min-width: 283px;
+  max-width: 530px;
   height: auto;
 }
 
+@media screen and (min-width: 480px) {
+  .chart {
+    width: calc(100% - 131px);
+    left: 131px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .chart {
+    top: 0;
+    padding: 0;
+  }
+}
 .sec__friend {
   position: relative;
   top: 76px;
   padding: 0 0 76px;
-}
-
-.friend-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .friend-card-list {
@@ -1525,9 +1480,8 @@ body {
 }
 @media screen and (min-width: 480px) {
   .sec__friend {
-    position: relative;
-    left: 131px;
     width: calc(100% - 131px);
+    left: 131px;
   }
   .friend-card-list {
     grid-template-columns: 99px 99px;
@@ -1540,8 +1494,8 @@ body {
 }
 @media screen and (min-width: 1024px) {
   .sec__friend {
-    position: relative;
-    left: 131px;
-    width: 393px;
+    top: 0;
+    padding: 0;
+    max-width: 393px;
   }
 }

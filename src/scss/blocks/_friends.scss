@@ -3,11 +3,6 @@
     top: 76px;
     padding: 0 0 76px;
 }
-.friend-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 .friend-card-list{
     display: grid;
     grid-gap: 36px 13px;
@@ -150,9 +145,8 @@
 
 @media screen and (min-width: 480px) {
     .sec__friend{
-        position: relative;
-        left: 131px;
         width: calc(100% - 131px);
+        left: 131px;
     }
     .friend-card-list{
         grid-template-columns: 99px 99px;
@@ -167,8 +161,8 @@
 
 @media screen and (min-width: 1024px) {
     .sec__friend{
-        position: relative;
-        left: 131px;
-        width: 393px;
+        top: 0;
+        padding: 0;
+        max-width: 393px;
     }
 }

@@ -11,6 +11,11 @@
     opacity: 0.4;
     display: none;
 }
+
+// Title
+.title-header{
+    @include center-styles;
+}
 .title{
     color: #3E3C50;
     line-height: 24px;
@@ -49,9 +54,13 @@
     }
 }
 .content-wrapp{
+    position: relative;
     display: flex;
     flex-direction: column;
 }
 @media screen and (min-width: 1024px) {
-
+    .content-wrapp{
+        flex-direction: row;
+        padding-bottom: 30px;
+    }
 }
