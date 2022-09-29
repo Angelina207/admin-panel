@@ -16,6 +16,12 @@
 .title-header{
     @include center-styles;
 }
+.title-wrapp{
+    display: flex;
+}
+.title-svg{
+    fill: #B0B1B1FF;
+}
 .title{
     color: #3E3C50;
     line-height: 24px;

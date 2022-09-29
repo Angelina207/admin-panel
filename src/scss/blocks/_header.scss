@@ -127,6 +127,9 @@
     &:focus {
         color: $nav-accent;
     }
+    & ~ .nav-link--margin{
+        margin-top: 181px;
+    }
 }
 .nav-link-icon{
     position: relative;
@@ -192,8 +195,9 @@
         top: 113px;
         width: 131px;
         min-width: auto;
+        min-height: 100%;
         height: auto;
-        padding: 26px 26px 550%;
+        padding: 26px 26px;
         overflow: hidden;
     }
     .btn-close{
@@ -203,9 +207,6 @@
         flex-direction: column;
         &:nth-child(even) {
             margin: 30px 0;
-        }
-        & ~ .nav-link--margin{
-            margin-top: 181px;
         }
     }
     .nav-link-icon{

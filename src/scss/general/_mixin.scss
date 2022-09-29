@@ -3,3 +3,13 @@
     justify-content: space-between;
     align-items: center;
 }
+@mixin friend-btn {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    top: calc(50% - 1px);
+    left: calc(50% - 5px);
+}

@@ -1,7 +1,6 @@
 .sec__friend{
     position: relative;
-    top: 76px;
-    padding: 0 0 76px;
+    top: 0;
 }
 .friend-card-list{
     display: grid;
@@ -81,46 +80,18 @@
     }
 }
 .friend-btn-remove::before{
-    content: '';
-    display: flex;
-    width: 10px;
-    height: 2px;
-    background: #fff;
-    position: absolute;
-    top: calc(50% - 1px);
-    left: calc(50% - 5px);
+    @include friend-btn;
     transform: rotate(45deg);
 }
 .friend-btn-remove::after{
-    content: '';
-    width: 10px;
-    height: 2px;
-    background: #fff;
-    display: block;
-    position: absolute;
-    top: calc(50% - 1px);
-    left: calc(50% - 5px);
+    @include friend-btn;
     transform: rotate(-45deg);
 }
 .friend-btn-add::before{
-    content: '';
-    display: flex;
-    width: 10px;
-    height: 2px;
-    background: #fff;
-    position: absolute;
-    top: calc(50% - 1px);
-    left: calc(50% - 5px);
+    @include friend-btn;
 }
 .friend-btn-add::after{
-    content: '';
-    width: 10px;
-    height: 2px;
-    background: #fff;
-    display: block;
-    position: absolute;
-    top: calc(50% - 1px);
-    left: calc(50% - 5px);
+    @include friend-btn;
     transform: rotate(-85deg);
 }
 
@@ -161,8 +132,6 @@
 
 @media screen and (min-width: 1024px) {
     .sec__friend{
-        top: 0;
-        padding: 0;
         max-width: 393px;
     }
 }

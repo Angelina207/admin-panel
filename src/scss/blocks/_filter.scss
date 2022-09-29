@@ -66,7 +66,9 @@
         box-shadow: 0px 4.2069px 4.2069px rgba(255, 102, 71, 0.25);
     }
 }
-
+.config-svg{
+    fill: #fff;
+}
 // Arrow to open/close
 .arrow{
     cursor: pointer;
@@ -147,17 +149,12 @@
         display: none;
     }
     .filter-content{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        @include center-styles;
         top: 0;
         left: 131px;
         width: calc(100% - 131px);
         height: 113px;
-        padding: 0px;
-    }
-    .user-name{
-        margin: 0 0 0 20px;
+        padding: 0px 30px;
     }
     .search-form{
         margin: 0;
@@ -167,7 +164,7 @@
     }
     .config-btn{
         position: static;
-        margin: 0 20px 0 9px;
+        margin: 0 0 0 9px;
     }
 }
 @media screen and (min-width: 768px){

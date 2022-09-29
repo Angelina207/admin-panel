@@ -2,13 +2,14 @@ export function carousel() {
     // Tabs
     document.querySelector('.tab__tab-btn').addEventListener('click', showCurrentTab);
     document.querySelector('.tab__tab-btn').addEventListener('click', aciveBtn);
-    const tabInnerBtn = document.querySelectorAll('.tab-btn-swich');
+
+    const tabInnerBtn = document.querySelectorAll('.tab-btn-switch');
     const wave = document.querySelector('.tab__wave');
     const slider = document.querySelectorAll('.tab-content');
     let currentTab;
 
     function showCurrentTab(event) {
-        if (event.target.className === 'tab-btn-swich') {
+        if (event.target.className === 'tab-btn-switch') {
             const tabAttr = parseInt(event.target.dataset.tab);
 
             for (let i = 0; i < slider.length; i++) {
@@ -22,14 +23,14 @@ export function carousel() {
 
             for (let i = 0; i < tabInnerBtn.length; i++) {
                 currentTab == i ? tabInnerBtn[i].classList.add('tab-is-active') : tabInnerBtn[i].classList.remove('tab-is-active');
-            }   
-
+                } 
+            
             if (currentTab == '0') {
-                wave.style.top = '4%';
+                wave.style.top = 'calc(16% - 65px)';
             } else if (currentTab == '1') {
-                wave.style.top = 'calc(50% - 68px)';
+                wave.style.top = 'calc(50% - 65px)';
             } else if (currentTab == '2') {
-                wave.style.top = '65%';
+                wave.style.top = 'calc(83% - 65px)';
             }
         } 
     }

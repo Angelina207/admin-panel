@@ -258,10 +258,11 @@ textarea {
 
 body {
   box-sizing: border-box;
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
   min-width: 320px;
   width: 100vw;
+  height: auto;
   overflow-x: hidden;
   font-family: "Google Sans";
   background: #fcfcfc;
@@ -338,6 +339,14 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.title-wrapp {
+  display: flex;
+}
+
+.title-svg {
+  fill: #b0b1b1;
 }
 
 .title {
@@ -517,6 +526,9 @@ body {
 .nav-link:hover, .nav-link:focus {
   color: #1C295D;
 }
+.nav-link ~ .nav-link--margin {
+  margin-top: 181px;
+}
 
 .nav-link-icon {
   position: relative;
@@ -585,8 +597,9 @@ body {
     top: 113px;
     width: 131px;
     min-width: auto;
+    min-height: 100%;
     height: auto;
-    padding: 26px 26px 550%;
+    padding: 26px 26px;
     overflow: hidden;
   }
   .btn-close {
@@ -597,9 +610,6 @@ body {
   }
   .nav-link:nth-child(even) {
     margin: 30px 0;
-  }
-  .nav-link ~ .nav-link--margin {
-    margin-top: 181px;
   }
   .nav-link-icon {
     position: relative;
@@ -711,6 +721,10 @@ body {
   box-shadow: 0px 4.2069px 4.2069px rgba(255, 102, 71, 0.25);
 }
 
+.config-svg {
+  fill: #fff;
+}
+
 .arrow {
   cursor: pointer;
   position: absolute;
@@ -795,16 +809,13 @@ body {
   }
   .filter-content {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     top: 0;
     left: 131px;
     width: calc(100% - 131px);
     height: 113px;
-    padding: 0px;
-  }
-  .user-name {
-    margin: 0 0 0 20px;
+    padding: 0px 30px;
   }
   .search-form {
     margin: 0;
@@ -814,7 +825,7 @@ body {
   }
   .config-btn {
     position: static;
-    margin: 0 20px 0 9px;
+    margin: 0 0 0 9px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -832,25 +843,19 @@ body {
   position: relative;
   top: 76px;
   padding: 60px 0 125px;
+  width: 100%;
   overflow-x: hidden;
 }
 
 .tab__carousel-head {
   position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  width: auto;
   z-index: 2;
+  padding: 0 30px;
 }
 
 .carousel-wrapp {
   display: flex;
-}
-.carousel-wrapp:nth-child(1) {
-  padding-left: 20px;
-}
-.carousel-wrapp:nth-child(2) {
-  padding-right: 20px;
 }
 
 .carousel-btn {
@@ -869,6 +874,12 @@ body {
   transform: rotate(-135deg);
 }
 
+.tab-carousel-wrapp {
+  display: flex;
+  align-items: center;
+  padding-top: 63px;
+}
+
 .tab__tab-btn {
   display: flex;
   justify-content: center;
@@ -880,11 +891,11 @@ body {
   z-index: 1;
   background: #fcfcfc;
   background: linear-gradient(-90deg, rgb(252, 252, 252) 68%, rgba(255, 255, 255, 0) 100%);
-  height: 80%;
+  height: auto;
   width: 70px;
 }
 
-.tab-btn-swich {
+.tab-btn-switch {
   display: inline-block;
   color: #353646;
   opacity: 0.4;
@@ -892,9 +903,9 @@ body {
   font-weight: 500;
   cursor: pointer;
   transition: all 250ms;
-  margin: 39px 0;
+  margin: 22px 0;
 }
-.tab-btn-swich:hover, .tab-btn-swich:focus {
+.tab-btn-switch:hover, .tab-btn-switch:focus {
   color: #FF6647;
   opacity: 1;
 }
@@ -907,7 +918,7 @@ body {
 .tab__wave {
   position: absolute;
   right: -2px;
-  top: calc(50% - 68px);
+  top: calc(50% - 65px);
   transition: all 300ms;
 }
 
@@ -919,13 +930,12 @@ body {
 .tab-content {
   position: relative;
   left: 70px;
-  width: 100%;
-  padding-top: 64px;
+  width: calc(100% - 70px);
   transition: all 300ms;
 }
 
 .tab__carousel:nth-child(even) {
-  padding: 0 30px;
+  margin: 0 30px;
 }
 
 .carousel__card {
@@ -1009,12 +1019,10 @@ body {
   .tab {
     width: calc(100% - 131px);
     left: 131px;
+    top: 0;
   }
 }
 @media screen and (min-width: 768px) {
-  .tab {
-    top: 0;
-  }
   .card__img {
     width: 262px;
     height: 170px;
@@ -1025,7 +1033,7 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .tab__carousel-head {
-    width: calc(100% - 270px);
+    width: calc(100% - 466px);
   }
 }
 .aside-content {
@@ -1282,7 +1290,7 @@ body {
 
 @media screen and (min-width: 480px) {
   .aside-content {
-    width: 406px;
+    max-width: 406px;
     box-shadow: -4px 14px 24px rgba(0, 0, 0, 0.06);
     left: 0;
     z-index: -1;
@@ -1290,13 +1298,11 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .aside-content {
-    width: 406px;
-    box-shadow: -4px 14px 24px rgba(0, 0, 0, 0.06);
     left: auto;
     right: 0;
     top: 0;
-    z-index: 1;
     padding: 20px;
+    z-index: 1;
   }
   .aside__button {
     display: none;
@@ -1328,8 +1334,7 @@ body {
 }
 .sec__friend {
   position: relative;
-  top: 76px;
-  padding: 0 0 76px;
+  top: 0;
 }
 
 .friend-card-list {
@@ -1415,7 +1420,7 @@ body {
 
 .friend-btn-remove::before {
   content: "";
-  display: flex;
+  display: block;
   width: 10px;
   height: 2px;
   background: #fff;
@@ -1427,10 +1432,10 @@ body {
 
 .friend-btn-remove::after {
   content: "";
+  display: block;
   width: 10px;
   height: 2px;
   background: #fff;
-  display: block;
   position: absolute;
   top: calc(50% - 1px);
   left: calc(50% - 5px);
@@ -1439,7 +1444,7 @@ body {
 
 .friend-btn-add::before {
   content: "";
-  display: flex;
+  display: block;
   width: 10px;
   height: 2px;
   background: #fff;
@@ -1450,10 +1455,10 @@ body {
 
 .friend-btn-add::after {
   content: "";
+  display: block;
   width: 10px;
   height: 2px;
   background: #fff;
-  display: block;
   position: absolute;
   top: calc(50% - 1px);
   left: calc(50% - 5px);
@@ -1494,8 +1499,6 @@ body {
 }
 @media screen and (min-width: 1024px) {
   .sec__friend {
-    top: 0;
-    padding: 0;
     max-width: 393px;
   }
 }
