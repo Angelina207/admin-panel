@@ -1,3 +1,30 @@
+// Button to open aside
+.aside-btn-open{
+    position: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    &::before,
+    &::after,
+    & > .aside-btn-dot{
+        width: 4px;
+        height: 4px;
+        content: '';
+        background: #fff;
+        display: block;
+        border-radius: 50%;
+    }
+    &::before,
+    &::after{
+        margin: 0 2px;
+    }
+}
+
 // Apartment block
 .aside-content{
     box-sizing: border-box;
@@ -35,7 +62,6 @@
     }
     &::before{
         transform: rotate(45deg);
-        
     }
     &::after{
         transform: rotate(-45deg);
@@ -248,12 +274,40 @@
     .aside-content{
         max-width: 406px;
         box-shadow: -4px 14px 24px rgba(0, 0, 0, 0.06);
-        left: 0;
-        z-index: -1;
+        top: 0;
+        left: auto;
+        right: -2000%;
     }
-    // .aside__button{
-    //     display: none;
-    // }
+    .btn__aside-btn{
+        position: absolute;
+        top: calc(50% - 16px);
+        left: calc(50% - 16px);
+    }
+    .aside-btn-open{
+        flex-direction: column;
+        width: 36px;
+        height: 36px;
+        border: none;
+        &::before,
+        &::after,
+        & > .aside-btn-dot{
+            width: 100%;
+            height: 2px;
+            border-radius: 0%;
+        }
+        & > .aside-btn-dot{
+            margin: 5px 0;
+        }
+    }
+    .aside-btn-line{
+        display: block ;
+        width: 100%;
+        height: 2px;
+        background: #fff;
+    }
+    .is-open{
+        right: 0;
+    }
 }
 
 @media screen and (min-width: 1280px){

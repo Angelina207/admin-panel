@@ -8,9 +8,7 @@
     z-index: 5;
 }
 .header__btn{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include center-styles;
 }
 // Burger
 .btn__burger{
@@ -31,32 +29,6 @@
     }
 }
 
-// Button to open aside
-.aside-btn-open{
-    position: inherit;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 36px;
-    height: 36px;
-    background: transparent;
-    border: 1px solid #fff;
-    border-radius: 50%;
-    &::before,
-    &::after,
-    & > .aside-btn-dot{
-        width: 4px;
-        height: 4px;
-        content: '';
-        background: #fff;
-        display: block;
-        border-radius: 50%;
-    }
-    &::before,
-    &::after{
-        margin: 0 2px;
-    }
-}
 // Navigation
 .header__nav{ 
     display: flex;
@@ -182,13 +154,9 @@
         width: 131px;
         height: 113px;
         min-width: auto;
+        z-index: 0;
     }
     .btn__burger{
-        position: absolute;
-        left: calc(50% - 13px);
-        top: calc(50% - 10px);
-    }
-    .btn__aside-btn{
         display: none;
     }
     .header__nav{ 
@@ -199,6 +167,17 @@
         height: auto;
         padding: 26px 26px;
         overflow: hidden;
+        &::after{
+            position: fixed;
+            top: 113px;
+            left: 0;
+            content: '';
+            width: inherit;
+            height: 100%;
+            background: rgb(244,245,250);
+            background: linear-gradient(90deg, rgba(244,245,250,1) 48%, rgba(234,236,241,1) 100%, rgba(216,218,225,1) 100%, rgba(214,216,223,1) 100%);
+            z-index: -1;
+        }
     }
     .btn-close{
         display: none;

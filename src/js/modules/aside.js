@@ -8,4 +8,6 @@ export function aside() {
         asideBar.classList.toggle('is-open');
         asideBar.classList.contains('is-open') ? overlay.style.display = 'block' : overlay.style.display = 'none';
     }
+
+    
 }
