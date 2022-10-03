@@ -26,11 +26,11 @@ export function carousel() {
                 } 
             
             if (currentTab == '0') {
-                wave.style.top = 'calc(16% - 65px)';
+                wave.style.top = '12%';
             } else if (currentTab == '1') {
-                wave.style.top = 'calc(50% - 65px)';
+                wave.style.top = '42%';
             } else if (currentTab == '2') {
-                wave.style.top = 'calc(83% - 65px)';
+                wave.style.top = '72%';
             }
         } 
     }

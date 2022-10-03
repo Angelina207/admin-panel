@@ -386,14 +386,23 @@ body {
 
 .content-wrapp {
   position: relative;
-  display: flex;
-  flex-direction: column;
+  top: 76px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
 }
 
+@media screen and (min-width: 480px) {
+  .content-wrapp {
+    grid-template-rows: 1fr auto;
+  }
+}
 @media screen and (min-width: 1024px) {
   .content-wrapp {
-    flex-direction: row;
-    padding-bottom: 30px;
+    top: 0;
+    left: 131px;
+    width: calc(100% - 131px);
+    display: grid;
+    grid-template-columns: 393px 1fr;
   }
 }
 .header {
@@ -827,16 +836,14 @@ body {
 .tab {
   position: relative;
   top: 76px;
-  padding: 60px 0 125px;
+  padding: 60px 0 0;
   width: 100%;
   overflow-x: hidden;
 }
 
 .tab__carousel-head {
   position: relative;
-  width: auto;
-  z-index: 2;
-  padding: 0 30px;
+  padding: 0 20px;
 }
 
 .carousel-wrapp {
@@ -861,22 +868,23 @@ body {
 
 .tab-carousel-wrapp {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   padding-top: 63px;
 }
 
 .tab__tab-btn {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  position: absolute;
+  position: relative;
   left: 0;
   writing-mode: vertical-lr;
   transform: rotate(-180deg);
   z-index: 1;
   background: #fcfcfc;
-  background: linear-gradient(-90deg, rgb(252, 252, 252) 68%, rgba(255, 255, 255, 0) 100%);
-  height: auto;
+  background: linear-gradient(-90deg, rgb(252, 252, 252) 65%, rgba(255, 255, 255, 0) 100%);
+  max-height: 339px;
+  height: 50%;
   width: 70px;
 }
 
@@ -888,11 +896,14 @@ body {
   font-weight: 500;
   cursor: pointer;
   transition: all 250ms;
-  margin: 22px 0;
+  padding: 10px 0;
 }
 .tab-btn-switch:hover, .tab-btn-switch:focus {
   color: #FF6647;
   opacity: 1;
+}
+.tab-btn-switch:nth-child(even) {
+  padding: 44px 0;
 }
 
 .tab-is-active {
@@ -903,7 +914,7 @@ body {
 .tab__wave {
   position: absolute;
   right: -2px;
-  top: calc(50% - 65px);
+  top: 42%;
   transition: all 300ms;
 }
 
@@ -913,8 +924,6 @@ body {
 }
 
 .tab-content {
-  position: relative;
-  left: 70px;
   width: calc(100% - 70px);
   transition: all 300ms;
 }
@@ -926,7 +935,7 @@ body {
 .carousel__card {
   position: relative;
   box-sizing: border-box;
-  box-shadow: 0px 100px 80px rgba(153, 165, 236, 0.05), 0px 64.8148px 46.8519px rgba(153, 165, 236, 0.037963), 0px 38.5185px 25.4815px rgba(153, 165, 236, 0.0303704), 0px 20px 13px rgba(153, 165, 236, 0.025), 0px 8.14815px 6.51852px rgba(153, 165, 236, 0.0196296), 0px 1.85185px 3.14815px rgba(153, 165, 236, 0.012037);
+  box-shadow: 0px 15px 80px rgba(153, 165, 236, 0.05), 0px 64.8148px 46.8519px rgba(153, 165, 236, 0.037963), 0px 38.5185px 25.4815px rgba(153, 165, 236, 0.0303704), 0px 20px 13px rgba(153, 165, 236, 0.025), 0px 8.14815px 6.51852px rgba(153, 165, 236, 0.0196296), 0px 1.85185px 3.14815px rgba(153, 165, 236, 0.012037);
   border-radius: 25px;
   padding: 12px 12px 24px;
   background: #fff;
@@ -954,6 +963,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
   width: 35px;
   height: 35px;
   border-radius: 50%;
@@ -1013,6 +1023,11 @@ body {
     width: calc(100% - 131px);
     left: 131px;
     top: 0;
+  }
+}
+@media screen and (min-width: 580px) {
+  .tab__carousel-head {
+    padding: 0 30px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1452,13 +1467,14 @@ body {
 .chart {
   position: relative;
   top: 76px;
-  padding-bottom: 60px;
+  padding: 0 0 60px;
 }
 
 .chart-body {
   min-width: 283px;
-  max-width: 530px;
+  max-width: 580px;
   height: auto;
+  margin: 32px auto 0;
 }
 
 @media screen and (min-width: 480px) {
@@ -1469,13 +1485,16 @@ body {
 }
 @media screen and (min-width: 1024px) {
   .chart {
+    width: auto;
+    max-width: 580px;
+    left: 0;
     top: 0;
     padding: 0;
+    margin: 0;
   }
 }
 .sec__friend {
   position: relative;
-  top: 0;
 }
 
 .friend-card-list {
@@ -1513,7 +1532,7 @@ body {
   background-color: #DDFFE9;
 }
 .friend-card:hover, .friend-card:focus {
-  box-shadow: 0px 4px 15px rgba(160, 230, 255, 0.2);
+  box-shadow: 0px 6px 20px rgba(160, 230, 255, 0.2);
 }
 
 .friend-img-wrapp {
@@ -1629,9 +1648,6 @@ body {
     width: calc(100% - 131px);
     left: 131px;
   }
-  .friend-card-list {
-    grid-template-columns: 99px 99px;
-  }
 }
 @media screen and (min-width: 540px) {
   .friend-card-list {
@@ -1640,6 +1656,7 @@ body {
 }
 @media screen and (min-width: 1024px) {
   .sec__friend {
-    max-width: 393px;
+    left: 0;
+    width: auto;
   }
 }

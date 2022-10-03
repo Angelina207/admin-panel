@@ -1,6 +1,5 @@
 .sec__friend{
     position: relative;
-    top: 0;
 }
 .friend-card-list{
     display: grid;
@@ -37,7 +36,7 @@
     }
     &:hover,
     &:focus {
-        box-shadow: 0px 4px 15px rgba(160, 230, 255, 0.2);
+        box-shadow: 0px 6px 20px rgba(160, 230, 255, 0.2);
     }
 }
 .friend-img-wrapp{
@@ -119,9 +118,6 @@
         width: calc(100% - 131px);
         left: 131px;
     }
-    .friend-card-list{
-        grid-template-columns: 99px 99px;
-    }
 }
 
 @media screen and (min-width: 540px) {
@@ -132,6 +128,7 @@
 
 @media screen and (min-width: 1024px) {
     .sec__friend{
-        max-width: 393px;
+        left: 0;
+        width: auto;
     }
 }

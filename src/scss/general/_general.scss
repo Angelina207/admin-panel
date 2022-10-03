@@ -59,14 +59,25 @@
         border: 1px $accent-blue solid;
     }
 }
+
+    // Wrapper for 'chart' and 'friend' sections
 .content-wrapp{
     position: relative;
-    display: flex;
-    flex-direction: column;
+    top: 76px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+@media screen and (min-width: 480px) {
+    .content-wrapp{
+        grid-template-rows: 1fr auto;
+    }
 }
 @media screen and (min-width: 1024px) {
     .content-wrapp{
-        flex-direction: row;
-        padding-bottom: 30px;
+        top: 0;
+        left: 131px;
+        width: calc(100% - 131px);
+        display: grid;
+        grid-template-columns: 393px 1fr;
     }
 }

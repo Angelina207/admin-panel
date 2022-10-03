@@ -1,12 +1,13 @@
 .chart{
     position: relative;
     top: 76px;
-    padding-bottom: 60px;
+    padding: 0 0 60px;
 }
 .chart-body{
     min-width: 283px;
-    max-width: 530px;
+    max-width: 580px;
     height: auto;
+    margin: 32px auto 0;
 }
 @media screen and (min-width: 480px) {
     .chart{
@@ -16,7 +17,11 @@
 }
 @media screen and (min-width: 1024px) {
     .chart{
+        width: auto;
+        max-width: 580px;
+        left: 0;
         top: 0;
         padding: 0;
+        margin: 0;
     }
 }
