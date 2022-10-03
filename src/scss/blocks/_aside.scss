@@ -274,9 +274,8 @@
     .aside-content{
         max-width: 406px;
         box-shadow: -4px 14px 24px rgba(0, 0, 0, 0.06);
-        top: 0;
-        left: auto;
-        right: -2000%;
+        top: -1000%;
+        left: calc(100% - 406px);
     }
     .btn__aside-btn{
         position: absolute;
@@ -306,7 +305,7 @@
         background: #fff;
     }
     .is-open{
-        right: 0;
+        top: 0;
     }
 }
 

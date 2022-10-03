@@ -1,0 +1,95 @@
+
+.gallery-wrapp{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0,0,0,0.7847339619441527) 0%, rgba(48,19,13,1) 100%, rgba(45,18,12,1) 100%, rgba(255,102,71,1) 100%);
+    z-index: 10;
+    overflow: hidden;
+    display: flex;
+    align-items: center; 
+}
+.gallery-close-btn{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 45px;
+    height: 45px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background: transparent;
+    transition: 250ms;
+    opacity: 0.8;
+    &:hover,
+    &:focus {
+        opacity: 1;
+        -webkit-box-shadow: 0px 5px 10px 2px rgba(255, 255, 255, 0.2);
+        -moz-box-shadow: 0px 5px 10px 2px rgba(255, 255, 255, 0.2);
+        box-shadow: 0px 5px 10px 2px rgba(255, 255, 255, 0.2);
+    }
+    &::before,
+    &::after {
+        position: absolute;
+        top: calc(50% - 1px);
+        left: calc(50% - 10px);
+        content: '';
+        width: 20px;
+        height: 2px;
+        background: #fff;
+    }
+    &::before{
+        transform: rotate(-45deg);  
+    }
+    &::after{
+        transform: rotate(45deg);
+    }
+}
+.gallery-img-wrapp{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+}
+.gallery-img{
+    width: 270px;
+    height: auto;
+    min-height: 170px;
+    background: gray;
+    overflow: hidden;
+    border-radius: 15px;
+    -webkit-box-shadow: 0px 5px 10px 2px rgba(255, 255, 255, 0.2);
+    -moz-box-shadow: 0px 5px 10px 2px rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 5px 10px 2px rgba(255, 255, 255, 0.2);
+}
+
+.gallery-btn-list{
+    width: 90%;
+    @include center-styles;
+    margin: 40px auto 0;
+}
+.galery-btn{
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    opacity: 0.8;
+    transition: 250ms;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    &:hover,
+    &:focus {
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .gallery-img{
+        width: 390px;
+        max-width: 460px;
+        max-height: auto;
+        height: 200px;
+        min-height: auto;
+    }
+}
