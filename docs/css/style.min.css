@@ -639,6 +639,14 @@ body {
     margin: 0 0 16px;
   }
 }
+@media screen and (min-width: 1280px) {
+  .btn__burger {
+    position: absolute;
+    left: calc(50% - 12.5px);
+    top: calc(50% - 8px);
+    display: block;
+  }
+}
 .filter {
   font-family: "Gilroy";
 }
@@ -1371,6 +1379,9 @@ body {
     z-index: 1;
   }
   .aside__button {
+    display: none;
+  }
+  .aside-btn-open {
     display: none;
   }
 }

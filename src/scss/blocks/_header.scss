@@ -225,3 +225,12 @@
         margin: 0 0 16px;
     }
 }
+
+@media screen and (min-width: 1280px) {
+    .btn__burger{
+        position: absolute;
+        left: calc(50% - 12.5px);
+        top: calc(50% - 8px);
+        display: block;
+    }
+}
