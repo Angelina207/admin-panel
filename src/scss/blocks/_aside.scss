@@ -151,8 +151,7 @@
 
 // Info head
 .info-head{
-    display: flex;
-    justify-content: space-between;
+    @include center-styles;
 }
 .info-owner{
     color: $aside;
@@ -160,10 +159,9 @@
     font-size: 1rem;
     line-height: 25px;
 }
-.info-btn-note{
-    background: transparent;
+.info-btn-svg{
+    fill: $accent-blue;
 }
-
 // Info body
 .info-body{
     @include center-styles;
@@ -224,7 +222,11 @@
     line-height: 25px;
     padding-left: 4px;
 }
-
+.info-foo-svg{
+    stroke-width: 0.2px;
+    stroke: $aside;
+    fill: $aside;
+}
 // Map
 .aside__map{
     min-width: calc(320px - 40px);
