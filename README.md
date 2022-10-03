@@ -6,6 +6,7 @@ GitHub Page: https://angelina207.github.io/admin-panel/
 * Header
 * Navbar
 * Aside
+* Gallery
 * Carousel
 * Tabs
 * Chart
