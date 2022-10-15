@@ -891,8 +891,7 @@ body {
   z-index: 1;
   background: #fcfcfc;
   background: linear-gradient(-90deg, rgb(252, 252, 252) 65%, rgba(255, 255, 255, 0) 100%);
-  max-height: 339px;
-  height: 50%;
+  height: 339px;
   width: 70px;
 }
 
@@ -1394,7 +1393,7 @@ body {
   background: rgb(0, 0, 0);
   background: radial-gradient(circle, rgba(0, 0, 0, 0.7847339619) 0%, rgb(48, 19, 13) 100%, rgb(45, 18, 12) 100%, rgb(255, 102, 71) 100%);
   z-index: 10;
-  overflow: hidden;
+  overflow-x: hidden;
   padding: 100px 30px;
   box-sizing: border-box;
   opacity: 0;
