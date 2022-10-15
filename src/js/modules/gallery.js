@@ -32,4 +32,6 @@ export function gallery() {
         });
     }
     closeGallery()
+
+    
 }
