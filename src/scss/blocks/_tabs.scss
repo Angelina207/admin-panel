@@ -4,6 +4,7 @@
     padding: 60px 0 0;
     width: 100%;
     overflow-x: hidden;
+    font-family: 'Gilroy';
 }
 // Carousel buttons
 .tab__carousel-head{
@@ -31,26 +32,23 @@
 // Tab carousel
 .tab-carousel-wrapp{
     display: flex;
-    align-items: flex-start;
-    padding-top: 63px;
+    align-items: center;
+    padding: 63px 0 80px;
 }
 // Tab buttons
 .tab__tab-btn{
     display: flex;
-    justify-content:flex-end;
+    justify-content:space-between;
     align-items: center;
     position: relative;
     left: 0;
     writing-mode: vertical-lr;
     transform: rotate(-180deg);
-    z-index: 1;
-    background: #FCFCFCFF;
     background: linear-gradient(-90deg, rgba(252,252,252,1) 65%, rgba(255,255,255,0) 100%);
-    height: 339px; 
+    height: 266px; 
     width: 70px;
 }
 .tab-btn-switch{
-    display: inline-block;
     color: #353646;
     opacity: 0.4;
     font-size: 0.9rem;
@@ -63,9 +61,6 @@
         color: $accent;
         opacity: 1;
     }
-    &:nth-child(even) {
-        padding: 44px 0;
-    }
 }
 .tab-is-active{
     color: $accent;
@@ -74,7 +69,7 @@
 .tab__wave{
     position: absolute;
     right: -2px;
-    top: 42%;
+    top: 27%;
     transition: all 300ms;
 }
 .wave-svg{
@@ -83,7 +78,6 @@
 }
 // The first content
 .tab-content{
-    // transform: translateX(-60px); //!!!!!
     width: calc(100% - 70px);
     transition: all 300ms;
 }

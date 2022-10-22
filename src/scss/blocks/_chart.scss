@@ -4,9 +4,6 @@
     padding: 0 0 60px;
 }
 .chart-body{
-    min-width: 283px;
-    max-width: 580px;
-    height: auto;
     margin: 32px auto 0;
 }
 @media screen and (min-width: 480px) {
@@ -23,5 +20,26 @@
         top: 0;
         padding: 0;
         margin: 0;
+    }
+}
+@media screen and (min-width: 1280px) {
+    .chart-container{
+        padding: 0;
+    }
+    .chart{
+        max-width: 340px;
+    }
+}
+@media screen and (min-width: 1380px) {
+    .chart{
+        max-width: 440px;
+    }
+}
+@media screen and (min-width: 1480px) {
+    .chart-container{
+        padding: 0 30px;
+    }
+    .chart{
+        max-width: 580px;
     }
 }

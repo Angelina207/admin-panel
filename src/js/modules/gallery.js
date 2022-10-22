@@ -4,25 +4,12 @@ export function gallery() {
     document.querySelector('.photo-list').addEventListener('click', openGallery)
 
     function openGallery(event) {  
-        document.querySelector('#rigth').addEventListener('click', scrollRight);
-        document.querySelector('#left').addEventListener('click', scrollLeft);
-        let imgAttr;
-        let currSrc;
-        const imgElem = event.target;      
+        document.querySelector('.right').addEventListener('click', scrollRight);
+        document.querySelector('.left').addEventListener('click', scrollLeft);
 
-        if (imgElem) {
-            imgAttr = event.target.getAttribute('src');
-        }
-        currSrc = document.querySelector('.gallery-img').src = imgAttr;
-
-        function scrollRight() {
-            const images = document.querySelectorAll('.photo-list-img');
-
-        }
-
-        function scrollLeft() {
-            
-        }
+        let current = 0;
+        const imgElem = event.target;
+        const images = document.querySelectorAll('.gallery-img');
 
         function open() {
             if (imgElem) {
@@ -32,7 +19,33 @@ export function gallery() {
                 galleryWrapp.style.opacity = '1';
             }
         }
+
+        function imgCounter() {
+            for (let i = 0; i < images.length; i++) {
+                images[i].style.opacity = '0'
+            } 
+            images[current].style.opacity = '1';
+        }
+
+        function scrollRight() {
+            if (current == images.length){
+                current = 0;
+            } else {
+                current++;
+            }
+            imgCounter()
+        }
+
+        function scrollLeft() {
+            current--;
+            if (current == -1) {
+                current = images.length - 1;
+            }
+            imgCounter()
+        }
+
         open()
+        scrollRight()
     }
  
     function closeGallery() {
