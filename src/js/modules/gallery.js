@@ -28,10 +28,10 @@ export function gallery() {
         }
 
         function scrollRight() {
-            if (current == images.length){
+            if (current + 1 === images.length) {
                 current = 0;
             } else {
-                current++;
+                current+=1;
             }
             imgCounter()
         }
