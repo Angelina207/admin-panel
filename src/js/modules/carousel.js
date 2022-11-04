@@ -1,37 +1,47 @@
 export function carousel() {
-    // Tabs
-    document.querySelector('.tab__tab-btn').addEventListener('click', showCurrentTab);
-    document.querySelector('.tab__tab-btn').addEventListener('click', aciveBtn);
+    (function () {
+        let tabItem = 1;
+        let offset = 0;
+        let currTrack;
+        let widthOfItem;
+        const tabBtn = document.querySelectorAll('.tab-btn-switch');
 
-    const tabInnerBtn = document.querySelectorAll('.tab-btn-switch');
-    const wave = document.querySelector('.tab__wave');
-    const slider = document.querySelectorAll('.tab-content');
-    let currentTab;
+        tabBtn.forEach(btn => {
+            btn.addEventListener('click', () => {
+               tabItem = btn.dataset.tab;
 
-    function showCurrentTab(event) {
-        if (event.target.className === 'tab-btn-switch') {
-            const tabAttr = parseInt(event.target.dataset.tab);
+               if(tabItem) currTrack = slideTrack();
+            })
+        })
 
-            for (let i = 0; i < slider.length; i++) {
-                tabAttr === i ? slider[i].style.display = 'flex' : slider[i].style.display = 'none';
+        function slideTrack() {
+            const track = document.querySelectorAll('.tab-track');
+            for (let i = 0; i < track.length; i++){
+                if(tabItem == i) currTrack = track[i];
+            }
+            return currTrack
+        }
+        slideTrack()
+
+        function currWidth(arr) {
+            arr = Array.from(currTrack.children);
+            for (let i = 0; i < arr.length; i++) {
+                widthOfItem = arr[i].offsetWidth
             }
         }
-    }
+        currWidth()
 
-    function aciveBtn(event) {
-        if (currentTab = event.target.dataset.tab) {
+        document.querySelector('.btn-right').addEventListener('click', () => {
+            offset = offset + widthOfItem + 30;
+            if(offset > (widthOfItem * 3) + 90) offset = 0;
 
-            for (let i = 0; i < tabInnerBtn.length; i++) {
-                currentTab == i ? tabInnerBtn[i].classList.add('tab-is-active') : tabInnerBtn[i].classList.remove('tab-is-active');
-                } 
-            
-            if (currentTab == '0') {
-                wave.style.top = '-11%';
-            } else if (currentTab == '1') {
-                wave.style.top = '27%';
-            } else if (currentTab == '2') {
-                wave.style.top = '64%';
-            }
-        } 
-    }
+            currTrack.style.transform = `translateX(${-offset}px)`;
+        })
+        document.querySelector('.btn-left').addEventListener('click', () => {
+            offset = offset - widthOfItem - 30;
+            if(offset < 0) offset = (widthOfItem * 3) + 90;
+
+            currTrack.style.transform = `translateX(${-offset}px)`;
+        })
+    })()
 }

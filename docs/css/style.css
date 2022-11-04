@@ -948,7 +948,6 @@ body {
 .tab-carousel-wrapp {
   display: flex;
   align-items: center;
-  padding: 63px 0 80px;
 }
 
 .tab__tab-btn {
@@ -996,7 +995,15 @@ body {
 }
 
 .tab-content {
+  align-items: center;
   width: calc(100% - 70px);
+  height: 420px;
+  overflow: hidden;
+  padding: 0 20px;
+}
+
+.tab-track {
+  display: flex;
   transition: all 300ms;
 }
 
